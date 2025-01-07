@@ -130,7 +130,7 @@
                 <li class="level1">
                     <a href="#">Blog</a>
                     <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="blog_classic.html" title="Blog Classic">Blog Classic</a></li>
+                        <li class="level2"><a href="blog.blade.php" title="Blog Classic">Blog Classic</a></li>
                         <li class="level2"><a href="blog_grid.html" title="Blog Grid">Blog Grid</a></li>
                         <li class="level2"><a href="blog_listing.html" title="Blog Listing">Blog Listing</a></li>
                         <li class="level2"><a href="blog_masonry.html" title="Blog Masonry">Blog Masonry</a></li>
