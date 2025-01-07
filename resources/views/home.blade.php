@@ -102,7 +102,7 @@
                                     <li class="level3"><a href="shop_sidebar_list.html" title="Shop Sidebar list">Shop Sidebar list</a></li>
                                     <li class="level3"><a href="shop_standar_sidebar.html" title="Shop Standar Sidebar">Shop Standar Sidebar</a></li>
                                     <li class="level3"><a href="shop_standar.html" title="Shop Standar">Shop Standar</a></li>
-                                    <li class="level3"><a href="shop_standard_simple_hero_section_dark.html" title="Shop Standard Simple Hero section dark">Shop Standard Simple Hero section dark</a></li>
+                                    <li class="level3"><a href="shop.blade.php" title="Shop Standard Simple Hero section dark">Shop Standard Simple Hero section dark</a></li>
                                     <li class="level3"><a href="shop_standard_simple_hero_section_light.html" title="Shop Standard Simple Hero section light">Shop Standard Simple Hero section light</a></li>
                                     <li class="level3"><a href="shop_standar.html" title="Shop Standard Simple Hero section">Shop Standard Simple Hero section</a></li>
                                 </ul>
