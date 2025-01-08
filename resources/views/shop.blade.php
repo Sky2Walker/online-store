@@ -78,7 +78,7 @@
                         </div>
                         <div class="topbar-language dropdown">
                             <a id="label1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            
+
                               <span>EN</span>
                               <span class="fa fa-caret-down f-10"></span>
                             </a>
@@ -99,7 +99,7 @@
                     <div class="topbar-option">
                         <div class="topbar-currency dropdown">
                             <a id="label2" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            
+
                               <span>USD</span>
                               <span class="fa fa-caret-down f-10"></span>
                             </a>
@@ -142,7 +142,7 @@
                                     <li class="level1 active dropdown"><a href="#">Home</a>
                                         <span class="plus js-plus-icon"></span>
                                         <ul class="dropdown-menu menu-level-1">
-                                            <li class="level2"><a href="home-simple.html" title="Home Simple">Home Simple</a></li>
+                                            <li class="level2"><a href="home.blade.php" title="Home Simple">Home Simple</a></li>
                                             <li class="level2"><a href="home_clean.html" title="Home Clean">Home Clean</a></li>
                                             <li class="level2"><a href="home_bestselling.html" title="Home Bestselling">Home Bestselling</a></li>
                                             <li class="level2"><a href="home_instagrams.html" title="Home Instagram Shop">Home Instagram Shop</a></li>
@@ -151,7 +151,7 @@
                                             <li class="level2"><a href="home_cate.html" title="Home Categories">Home Categories</a></li>
                                             <li class="level2"><a href="home_parallax.html" title="Home Parallax">Home Parallax</a></li>
                                             <li class="level2"><a href="home_fullslider.html" title="Home Fullslider">Home Fullslider</a></li>
-                                            <li class="level2"><a href="home_lookbook.html" title="Home Lookbook">Home Lookbook</a></li>
+                                            <li class="level2"><a href="home.blade.php" title="Home Lookbook">Home Lookbook</a></li>
                                             <li class="level2"><a href="home-minimal.html" title="Home Minimal">Home Minimal</a></li>
                                         </ul>
                                     </li>
@@ -261,7 +261,7 @@
                                         <a href="#">Blog</a>
                                         <span class="plus js-plus-icon"></span>
                                         <ul class="dropdown-menu menu-level-1">
-                                            <li class="level2"><a href="blog_classic.html" title="Blog Classic">Blog Classic</a></li>
+                                            <li class="level2"><a href="blog.blade.php" title="Blog Classic">Blog Classic</a></li>
                                             <li class="level2"><a href="blog_grid.html" title="Blog Grid">Blog Grid</a></li>
                                             <li class="level2"><a href="blog_listing.html" title="Blog Listing">Blog Listing</a></li>
                                             <li class="level2"><a href="blog_masonry.html" title="Blog Masonry">Blog Masonry</a></li>
@@ -474,7 +474,7 @@
                         <div class="col-md-15 col-sm-3 col-xs-6 product-item">
                             <div class="product-images">
                                 <a href="#" class="hover-images effect"><img src="img/products/tshirt.jpg" alt="photo" class="img-reponsive">
-                               
+
                                 </a>
                                 <div class="ribbon-new ver2"><span>new</span></div>
                                 <a href="#" class="btn-add-wishlist ver2"><i class="icon-heart"></i></a>
@@ -507,7 +507,7 @@
                         <div class="col-md-15 col-sm-3 col-xs-6 product-item">
                             <div class="product-images">
                                 <a href="#" class="hover-images effect"><img src="img/products/sneaker.jpg" alt="photo" class="img-reponsive">
-                                
+
                                 </a>
                                 <div class="ribbon-sale ver2"><span>sale</span></div>
                                 <a href="#" class="btn-add-wishlist ver2"><i class="icon-heart"></i></a>
@@ -600,7 +600,7 @@
                         <div class="col-md-15 col-sm-3 col-xs-6 product-item">
                             <div class="product-images">
                                 <a href="#" class="hover-images effect"><img src="img/products/hoodie.jpg" alt="photo" class="img-reponsive">
-                                
+
                                 </a>
                                 <div class="ribbon-sale ver2"><span>sale</span></div>
                                 <a href="#" class="btn-add-wishlist ver2"><i class="icon-heart"></i></a>
