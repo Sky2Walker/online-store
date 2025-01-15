@@ -5,30 +5,28 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Category;
+use App\Models\CategoriesGroups;
 
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Fields\Slug;
 use MoonShine\Laravel\Resources\ModelResource;
-use MoonShine\Support\AlpineJs;
-use MoonShine\Support\Enums\JsEvent;
-use MoonShine\Support\ListOf;
-use MoonShine\UI\Components\ActionButton;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\Checkbox;
+use MoonShine\UI\Fields\Field;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Fields\Text;
 
 /**
- * @extends ModelResource<Category>
+ * @extends ModelResource<CategoriesGroups>
  */
-class CategoryResource extends ModelResource
+class CategoriesGroupsResource extends ModelResource
 {
-    protected string $model = Category::class;
+    protected string $model = CategoriesGroups::class;
 
-    protected string $title = 'Категорії';
-
+    protected string $title = 'Під категорії';
 
     /**
      * @return list<FieldContract>
@@ -37,8 +35,8 @@ class CategoryResource extends ModelResource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Назва', 'name'),
-            Checkbox::make('Активний', 'is_active'),
+            Text::make('Name', 'name'),
+            Checkbox::make('Активно', 'is_active'),
         ];
     }
 
@@ -50,9 +48,15 @@ class CategoryResource extends ModelResource
         return [
             Box::make([
                 ID::make(),
-                Text::make('Title', 'name'),
-                Checkbox::make('Активний', 'is_active'),
+                Text::make('Name', 'name'),
+                BelongsTo::make('Sub Category',  'categories', 'name', resource: CategoryResource::class)
+                    ->searchable(),
+                Image::make('Зображення категорії', 'category_img')->removable()
+                    ->disk('public')
+                    ->dir('upload/images'),
+                Checkbox::make('Активно', 'is_active'),
                 Slug::make('Slug', 'slug')->from('name')->readonly(),
+
             ])
         ];
     }
@@ -64,14 +68,20 @@ class CategoryResource extends ModelResource
     {
         return [
             ID::make(),
-            Text::make('Назва', 'name'),
-            Checkbox::make('Активний', 'is_active'),
+            Text::make('Name', 'name'),
+            BelongsTo::make('Sub Category',  'categories', 'name', resource: CategoryResource::class)
+                ->searchable(),
+            Image::make('Зображення категорії', 'category_img')->removable()
+                ->disk('public')
+                ->dir('upload/images'),
+            Checkbox::make('Активно', 'is_active'),
             Slug::make('Slug', 'slug')->from('name')->readonly(),
+
         ];
     }
 
     /**
-     * @param Category $item
+     * @param CategoriesGroups $item
      *
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules
@@ -79,14 +89,5 @@ class CategoryResource extends ModelResource
     protected function rules(mixed $item): array
     {
         return [];
-    }
-
-
-    protected function topButtons(): ListOf
-    {
-        return parent::topButtons()->add(
-            ActionButton::make('Refresh', '#')
-                ->dispatchEvent(AlpineJs::event(JsEvent::TABLE_UPDATED, $this->getListComponentName()))
-        );
     }
 }

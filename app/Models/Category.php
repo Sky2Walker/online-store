@@ -11,4 +11,7 @@ class Category extends Model
     public function categories_groups(){
         return $this->hasMany(CategoriesGroups::class, 'category_id');
     }
+
+
+
 }
