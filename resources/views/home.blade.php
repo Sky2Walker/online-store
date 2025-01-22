@@ -340,86 +340,18 @@
         <div class="product-category space-padding-tb-50">
             <div class="container container-42">
                 <div class="owl-carousel owl-theme js-owl-category">
+                    @foreach($categoriesGroups as $categoriesGroup)
+                        @if($categoriesGroup->is_active)
                     <div class="box-category-item">
                         <div class="box-category text-center">
-                            <img src="img/shirt.png" alt="" class="img-reponsive">
+                            <img src="{{ asset('storage/' . $categoriesGroup->category_img) }}" alt="" class="img-reponsive">
                             <div class="box-category-name">
-                                <a href="">shirt</a>
+                                <a href="">{{$categoriesGroup->name}}</a>
                             </div>
                         </div>
                     </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/dress.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">Dress</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/high-heel.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">High Heel</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/circular-eyeglasses.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">Eyeglasses</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-category-item">
-                        <div class="box-category text-center">
-                            <img src="img/diamond.png" alt="" class="img-reponsive">
-                            <div class="box-category-name">
-                                <a href="">diamond</a>
-                            </div>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
