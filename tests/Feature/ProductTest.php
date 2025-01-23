@@ -21,4 +21,14 @@ class ProductTest extends TestCase
         $res->assertViewIs('home');
         $res->assertViewHas('products', $products);
     }
+
+    public function test_get_all_products_on_shop_page (): void
+    {
+        $products = Product::factory()->count(10)->create();
+        $res = $this->get('/shop');
+        $res->assertStatus(200);
+        $res->assertViewIs('shop');
+        $res->assertViewHas('products', $products);
+    }
+
 }
