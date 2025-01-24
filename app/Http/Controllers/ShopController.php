@@ -5,12 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\CategoriesGroups;
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use App\Services\ProductService;
+use App\Services\CategoriesGroupsService;
 class ShopController extends Controller
 {
+    protected $productService, $categoryService;
+
+    public function __construct(ProductService $productService, CategoriesGroupsService $categoryService){
+        $this->productService = $productService;
+        $this->categoryService = $categoryService;
+    }
+
+
     public function index(){
-        $products = Product::all();
-        $categoriesGroups = CategoriesGroups::all();
+        $products = $this->productService->getAllProducts();
+        $categoriesGroups = $this->categoryService->getAllCategoriesGroups();
+
+
         return view('shop', compact('products', 'categoriesGroups'));
     }
 }
