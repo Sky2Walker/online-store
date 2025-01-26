@@ -13,14 +13,20 @@ return new class extends Migration
     {
         Schema::create('product_variants', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
+
+            $table->unsignedBigInteger('product_id')->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->unsignedBigInteger('color_id')->nullable();
+
+            $table->unsignedBigInteger('color_id')->nullable()->index();
             $table->foreign('color_id')->references('id')->on('colors')->onDelete('cascade');
-            $table->unsignedBigInteger('size_id')->nullable();
+
+            $table->unsignedBigInteger('size_id')->nullable()->index();
             $table->foreign('size_id')->references('id')->on('sizes')->onDelete('cascade');
-            $table->unsignedBigInteger('material_id')->nullable();
+
+            $table->unsignedBigInteger('material_id')->nullable()->index();
             $table->foreign('material_id')->references('id')->on('materials')->onDelete('cascade');
+
+
             $table->integer('quantity');
             $table->decimal('price');
             $table->timestamps();
