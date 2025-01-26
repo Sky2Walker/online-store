@@ -27,8 +27,8 @@ return new class extends Migration
             $table->foreign('material_id')->references('id')->on('materials')->onDelete('cascade');
 
 
-            $table->integer('quantity');
-            $table->decimal('price');
+            $table->integer('quantity')->default(0);
+            $table->decimal('price', '20', '2');
             $table->timestamps();
         });
     }
