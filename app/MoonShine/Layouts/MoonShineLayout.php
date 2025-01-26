@@ -34,6 +34,10 @@ use App\MoonShine\Resources\CategoryResource;
 use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\CategoriesGroupsResource;
 use App\MoonShine\Resources\ProductResource;
+use App\MoonShine\Resources\SizeResource;
+use App\MoonShine\Resources\ColorResource;
+use App\MoonShine\Resources\MaterialResource;
+use App\MoonShine\Resources\ProductVariantResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -51,6 +55,10 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Categories', CategoryResource::class),
             MenuItem::make('CategoriesGroups', CategoriesGroupsResource::class),
             MenuItem::make('Products', ProductResource::class),
+            MenuItem::make('Sizes', SizeResource::class),
+            MenuItem::make('Colors', ColorResource::class),
+            MenuItem::make('Materials', MaterialResource::class),
+            MenuItem::make('ProductVariants', ProductVariantResource::class),
         ];
     }
 

@@ -14,6 +14,10 @@ use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Resources\CategoryResource;
 use App\MoonShine\Resources\CategoriesGroupsResource;
 use App\MoonShine\Resources\ProductResource;
+use App\MoonShine\Resources\SizeResource;
+use App\MoonShine\Resources\ColorResource;
+use App\MoonShine\Resources\MaterialResource;
+use App\MoonShine\Resources\ProductVariantResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -33,6 +37,10 @@ class MoonShineServiceProvider extends ServiceProvider
                 CategoryResource::class,
                 CategoriesGroupsResource::class,
                 ProductResource::class,
+                SizeResource::class,
+                ColorResource::class,
+                MaterialResource::class,
+                ProductVariantResource::class,
             ])
             ->pages([
                 ...$config->getPages(),
