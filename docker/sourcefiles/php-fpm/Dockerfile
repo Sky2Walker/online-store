@@ -12,6 +12,8 @@ RUN apt-get install libzip-dev zip libicu-dev libpq-dev -y
 
 RUN apt-get update && apt-get install -y nano
 
+RUN pecl install redis && docker-php-ext-enable redis
+
 # Install PHP extensions zip and intl (intl requires to be configured)
 RUN docker-php-ext-install zip && docker-php-ext-configure intl && docker-php-ext-install intl
 
