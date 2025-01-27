@@ -22,6 +22,7 @@ class ShopController extends Controller
         $categoriesGroups = $this->categoryService->getAllCategoriesGroups();
 
 
+
         return view('shop', compact('products', 'categoriesGroups'));
     }
 }
