@@ -2,6 +2,8 @@
 
 namespace App\Services;
 use App\Repositories\CategoriesGroupsRepository;
+use Illuminate\Support\Facades\Cache;
+
 class CategoriesGroupsService
 {
     protected $categoriesGroupsRepository;
@@ -11,7 +13,10 @@ class CategoriesGroupsService
     }
 
     public function getAllCategoriesGroups(){
-        $categoriesGroups = $this->categoriesGroupsRepository->getAll();
+
+        $categoriesGroups = Cache::remember('categoriesGroups:all', 3600, function(){
+            return $this->categoriesGroupsRepository->getAll();
+        });
         return $categoriesGroups;
     }
 }
