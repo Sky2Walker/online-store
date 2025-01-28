@@ -17,4 +17,8 @@ class ProductRepository
         return $this->productModel->all();
     }
 
+    public function getProductBySubCategoryId($subCategoryId){
+        return $this->productModel->category()->where('category_id', $subCategoryId)->firstOrFail();
+    }
+
 }

@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Cosso - Clean, Minimal Responsive HTML Template</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/PlayfairDisplay/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/simple-line-icon/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/font-awesome/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{asset('css/owl.carousel.min.css')}}" type="image/png">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 </head>
 
 <body>
@@ -175,7 +180,7 @@
                                             <a href="#">Shop pages</a>
                                             <ul class="menu-level-2 col-6">
                                                 <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                                <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
+                                                <li class="level3"><a href="checkout.blade.php" title="Checkout">Checkout</a></li>
                                             </ul>
                                             <div class="mega-product col-6">
                                                 <a href="#"><img src="img/mega_1.jpg" alt="" class="img-responsive"></a>
@@ -206,8 +211,8 @@
                                 <a href="#">Pages</a>
                                 <span class="plus js-plus-icon"></span>
                                 <ul class="dropdown-menu menu-level-1">
-                                    <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                                    <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                    <li class="level2"><a href="login.blade.php" title="Login">Login</a></li>
+                                    <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                                 </ul>
                             </li>
                             <li class="level1"><a href="" title="home-logo"><img src="img/cosre.png" alt="logo" class="img-reponsive"></a></li>
@@ -259,7 +264,7 @@
                                 <a href="#">Elements</a>
                                 <span class="plus js-plus-icon"></span>
                                 <ul class="dropdown-menu menu-level-1">
-                                    <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                                    <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                                     <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                                     <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                                 </ul>
@@ -275,7 +280,7 @@
                                     <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                                     <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                                     <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                                    <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                                    <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                                     <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                                 </ul>
                             </li>
@@ -326,7 +331,7 @@
                                                             <li class="level3"><a href="" title="">Shop — Product Category</a></li>
                                                             <li class="level3"><a href="" title="">Shop — with Sidebar</a></li>
                                                             <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                                            <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
+                                                            <li class="level3"><a href="checkout.blade.php" title="Checkout">Checkout</a></li>
                                                         </ul>
                                                         <div class="mega-product col-6">
                                                             <a href="#"><img src="img/mega_1.jpg" alt="" class="img-responsive"></a>
@@ -357,8 +362,8 @@
                                             <a href="#">Pages</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                                                <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                                <li class="level2"><a href="login.blade.php" title="Login">Login</a></li>
+                                                <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                                             </ul>
                                         </li>
                                         <li class="level1 dropdown hassub">
@@ -409,7 +414,7 @@
                                             <a href="#">Elements</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                                                <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                                             </ul>
@@ -425,7 +430,7 @@
                                                 <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                                                 <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                                                 <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                                                <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                                                <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                                                 <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                                             </ul>
                                         </li>
@@ -563,12 +568,13 @@
         </footer>
     </div>
     <a href="#" class="scroll_top">SCROLL TO TOP<span></span></a>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-slider.min.js')}}"></script>
+    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>
