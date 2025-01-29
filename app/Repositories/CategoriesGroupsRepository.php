@@ -10,6 +10,7 @@ class CategoriesGroupsRepository
     }
 
     public function getAll(){
+        // TODO добавить ::query()->select(['id', ....]) полей, которые нужны
         return $this->categoriesGroups->all();
     }
 }

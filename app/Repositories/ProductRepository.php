@@ -14,6 +14,8 @@ class ProductRepository
     }
 
     public function getAllProducts(){
+        // TODO добавить ::query()->select(['id', ....]) полей, которые нужны
+        // TODO сделать пагинацию или limit(), никаких all нигде
         return $this->productModel->all();
     }
 

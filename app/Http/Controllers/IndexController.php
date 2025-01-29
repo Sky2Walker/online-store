@@ -11,12 +11,19 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
 
-    protected $productService, $categoryService;
+//    protected $productService, $categoryService;
+//
+//    public function __construct(ProductService $productService, CategoriesGroupsService $categoryService){
+//        $this->productService = $productService;
+//        $this->categoryService = $categoryService;
+//    }
 
-    public function __construct(ProductService $productService, CategoriesGroupsService $categoryService){
-        $this->productService = $productService;
-        $this->categoryService = $categoryService;
-    }
+    // TODO более краткий и читабельный вариант
+    public function __construct(
+        protected ProductService          $productService,
+        protected CategoriesGroupsService $categoryService
+    ){}
+
     public function index()
     {
         $products = $this->productService->getAllProducts();
