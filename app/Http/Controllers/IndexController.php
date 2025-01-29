@@ -29,9 +29,9 @@ class IndexController extends Controller
     public function index()
     {
         $products = $this->productService->getAllProducts();
-
         $categoriesGroups = $this->categoryService->getAllCategoriesGroups();
         $homePageSlider = $this->homePageSliderService->getHomePageSlider();
+
         return view('home', compact('categoriesGroups', 'products', 'homePageSlider'));
     }
 }
