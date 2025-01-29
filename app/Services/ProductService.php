@@ -23,4 +23,10 @@ class ProductService
         });
         return $products;
     }
+
+    public function getProductBySubCategoryId($subCategoryId){
+        return $products = $this->productRepository->getProductBySubCategoryId($subCategoryId);
+    }
+
+
 }

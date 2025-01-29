@@ -25,4 +25,9 @@ class ShopController extends Controller
 
         return view('shop', compact('products', 'categoriesGroups'));
     }
+
+    public function showProductByTheySubCategories($id){
+        $products = $this ->productService->getProductBySubCategoryId($id);
+        return view('shop', compact('products'));
+    }
 }

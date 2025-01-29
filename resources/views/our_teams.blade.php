@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Cosso - Clean, Minimal Responsive HTML Template</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/PlayfairDisplay/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/simple-line-icon/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/font-awesome/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{asset('css/owl.carousel.min.css')}}" type="image/png">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 </head>
 
 <body>
@@ -162,9 +167,9 @@
                                                     <li class="level2 col-6">
                                                         <a href="#">Shop pages</a>
                                                         <ul class="menu-level-2 col-6">
-                                                            <li class="level3"><a href="cart_page_emty.html" title="Cart Empty">Cart Empty</a></li>
+                                                            <li class="level3"><a href="cart_page_emty.blade.php" title="Cart Empty">Cart Empty</a></li>
                                                             <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                                            <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
+                                                            <li class="level3"><a href="checkout.blade.php" title="Checkout">Checkout</a></li>
                                                         </ul>
                                                         <div class="mega-product col-6">
                                                             <a href="#"><img src="img/mega_1.jpg" alt="" class="img-responsive"></a>
@@ -179,7 +184,7 @@
                                                             <li class="level3"><a href="single_product_downloadable.html" title="Product Downloadable">Product — Downloadable</a></li>
                                                             <li class="level3"><a href="single_Product_Grouped.html" title="Product Grouped">Product — Grouped</a></li>
                                                             <li class="level3"><a href="single_product_affiliate.html" title="Product Affiliate">Product — External / Affiliate</a></li>
-                                                            <li class="level3"><a href="single_product_bundle.html" title="Product bundle">Product with bundle</a></li>
+                                                            <li class="level3"><a href="single_product_bundle.blade.php" title="Product bundle">Product with bundle</a></li>
                                                             <li class="level3"><a href="single_product_360.html" title="Product 360">Product 360 Degree View</a></li>
                                                             <li class="level3"><a href="single_product_video.html" title="Product Featured Video">Product Video</a></li>
                                                             <li class="level3"><a href="single_product_fullwidth.html" title="Product Fullwidth">Product Fullwidth</a></li>
@@ -198,8 +203,8 @@
                                             <a href="#">Pages</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                                                <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                                <li class="level2"><a href="login.blade.php" title="Login">Login</a></li>
+                                                <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                                             </ul>
                                         </li>
                                         <li class="level1 dropdown hassub">
@@ -210,15 +215,15 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Other Pages</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="about_agency.html" title="About Agency">About Agency</a></li>
-                                                            <li class="level3"><a href="about_shop.html" title="About Designer">About Designer</a></li>
-                                                            <li class="level3"><a href="about-designer.html" title="About Shop">About Shop</a></li>
+                                                            <li class="level3"><a href="about_agency.blade.php" title="About Agency">About Agency</a></li>
+                                                            <li class="level3"><a href="about_shop.blade.php" title="About Designer">About Designer</a></li>
+                                                            <li class="level3"><a href="about-designer.blade.php" title="About Shop">About Shop</a></li>
                                                             <li class="level3"><a href="commingsoon.html" title="Commingsoon">Commingsoon</a></li>
                                                             <li class="level3"><a href="contact_gmap.html" title="Contact_Map">Contact Map</a></li>
-                                                            <li class="level3"><a href="contact_simple.html" title="Contact_Simple">Contact Simple</a></li>
-                                                            <li class="level3"><a href="faq.html" title="FAQs">FAQs</a></li>
+                                                            <li class="level3"><a href="contact_simple.blade.php" title="Contact_Simple">Contact Simple</a></li>
+                                                            <li class="level3"><a href="faq.blade.php" title="FAQs">FAQs</a></li>
                                                             <li class="level3"><a href="our_teams.html" title="Our teams">Our teams</a></li>
-                                                            <li class="level3"><a href="404.html" title="404 pages">404 page</a></li>
+                                                            <li class="level3"><a href="404.blade.php" title="404 pages">404 page</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="level2 col-3">
@@ -239,7 +244,7 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Lookbook</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="lookbook_grid.html" title="Lookbook Grid">Lookbook Grid</a></li>
+                                                            <li class="level3"><a href="lookbook_grid.blade.php" title="Lookbook Grid">Lookbook Grid</a></li>
                                                             <li class="level3"><a href="lookbook_masonry.html" title="Lookbook Masonry">Lookbook Masonry</a></li>
                                                             <li class="level3"><a href="lookbook_popup.html" title="Lookbook Popup">Lookbook Popup</a></li>
                                                         </ul>
@@ -252,7 +257,7 @@
                                             <a href="#">Elements</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                                                <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                                             </ul>
@@ -268,7 +273,7 @@
                                                 <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                                                 <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                                                 <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                                                <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                                                <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                                                 <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                                             </ul>
                                         </li>
@@ -284,7 +289,7 @@
         <div class="hero-section v3">
             <img src="img/about/about_simple_bg.jpg" alt="" class="img-responsive">
             <div class="box-center">
-                <h1 class="page-title">FAQs</h1>
+                <h1 class="page-title">Our Teams</h1>
                 <ul class="breadcrumb">
                     <li><a href="">Home</a></li>
                     <li><a href="">Elements</a></li>
@@ -294,66 +299,114 @@
         </div>
         <!--our teams-->
         <div class="container">
-            <h2 class="faq-title text-center">Organize content into logical expandable sections. It is mostly used to build FAQ pages but it’s flexibility allows you to get creative with it.</h2>
-            <div class="faq js-faq">
-                <div class="faq-content">
-                    <a href="" onClick="return false;" class="faq-quest">Shipping Methods Are Available?
-
-                    </a>
-                    <span class="plus js-plus-icon"></span>
-                    <div class="faq-answer">
-                        <p>Completely network high standards in innovation whereas goal-oriented paradigms. Intrinsicly morph human capital via enabled convergence. Objectively pursue leading-edge web-readiness before market-driven paradigms. Competently disseminate go forward "outside the box" thinking before proactive expertise. Quickly incubate effective schemas through future-proof users.</p>
-                        <p>Professionally initiate alternative metrics before high standards in synergy. Quickly enable orthogonal technology for enabled sources. Dramatically evisculate functional web services via emerging human capital. Synergistically promote high-payoff niches and client-based niches. Appropriately mesh technically sound processes vis-a-vis exceptional meta-services.
-                        </p>
-                        <p>Intrinsicly re-engineer standards compliant potentialities with business process improvements. Authoritatively reinvent cross-unit catalysts for change before high-quality outsourcing. Uniquely predominate technically sound web-readiness rather than cost effective solutions. Phosfluorescently synergize.</p>
-                    </div>
+            <div class="our-teams">
+                <div class="text-center">
+                    <h2 class="us-title text-center">
+                    Dramatically empower covalent opportunities before worldwide leadership skills
+                </h2>
+                    <p class="us-desc">Completely initiate cross functional e-markets whereas global growth strategies. Holisticly e-enable
+                        <br>plug-and-play convergence and technically sound e-markets. Globally reintermediate web-enabled niches with accurate </p>
                 </div>
-                <div class="faq-content">
-                    <a href="" onClick="return false;" class="faq-quest">How Long Will It Take To Get My Package?
-
-                </a>
-                    <span class="plus js-plus-icon"></span>
-                    <div class="faq-answer">
-                        <p>Completely network high standards in innovation whereas goal-oriented paradigms. Intrinsicly morph human capital via enabled convergence. Objectively pursue leading-edge web-readiness before market-driven paradigms. Competently disseminate go forward "outside the box" thinking before proactive expertise. Quickly incubate effective schemas through future-proof users.</p>
-                        <p>Professionally initiate alternative metrics before high standards in synergy. Quickly enable orthogonal technology for enabled sources. Dramatically evisculate functional web services via emerging human capital. Synergistically promote high-payoff niches and client-based niches. Appropriately mesh technically sound processes vis-a-vis exceptional meta-services.
-                        </p>
-                        <p>Intrinsicly re-engineer standards compliant potentialities with business process improvements. Authoritatively reinvent cross-unit catalysts for change before high-quality outsourcing. Uniquely predominate technically sound web-readiness rather than cost effective solutions. Phosfluorescently synergize.</p>
+                <div class="owl-carousel owl-theme js-owl-team">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/about/team_1.jpg" alt="">
+                            <div class="box-center overlay-img ver4 social">
+                                <a href="#" title="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" title="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" title="google plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name"><a href="">Frank Greer</a></h3>
+                            <p class="team-career">DESIGNER</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-content">
-                    <a href="" onClick="return false;" class="faq-quest">How To Return A Product?
-
-                </a>
-                    <span class="plus js-plus-icon"></span>
-                    <div class="faq-answer">
-                        <p>Completely network high standards in innovation whereas goal-oriented paradigms. Intrinsicly morph human capital via enabled convergence. Objectively pursue leading-edge web-readiness before market-driven paradigms. Competently disseminate go forward "outside the box" thinking before proactive expertise. Quickly incubate effective schemas through future-proof users.</p>
-                        <p>Professionally initiate alternative metrics before high standards in synergy. Quickly enable orthogonal technology for enabled sources. Dramatically evisculate functional web services via emerging human capital. Synergistically promote high-payoff niches and client-based niches. Appropriately mesh technically sound processes vis-a-vis exceptional meta-services.
-                        </p>
-                        <p>Intrinsicly re-engineer standards compliant potentialities with business process improvements. Authoritatively reinvent cross-unit catalysts for change before high-quality outsourcing. Uniquely predominate technically sound web-readiness rather than cost effective solutions. Phosfluorescently synergize.</p>
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/about/team_2.jpg" alt="">
+                            <div class="box-center overlay-img ver4 social">
+                                <a href="#" title="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" title="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" title="google plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name"><a href="">Santos Harrington</a></h3>
+                            <p class="team-career">CO-FOUNDER</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-content">
-                    <a href="" onClick="return false;" class="faq-quest">What Should I Know About Pre-Orders?
-
-                </a>
-                    <span class="plus js-plus-icon"></span>
-                    <div class="faq-answer">
-                        <p>Completely network high standards in innovation whereas goal-oriented paradigms. Intrinsicly morph human capital via enabled convergence. Objectively pursue leading-edge web-readiness before market-driven paradigms. Competently disseminate go forward "outside the box" thinking before proactive expertise. Quickly incubate effective schemas through future-proof users.</p>
-                        <p>Professionally initiate alternative metrics before high standards in synergy. Quickly enable orthogonal technology for enabled sources. Dramatically evisculate functional web services via emerging human capital. Synergistically promote high-payoff niches and client-based niches. Appropriately mesh technically sound processes vis-a-vis exceptional meta-services.
-                        </p>
-                        <p>Intrinsicly re-engineer standards compliant potentialities with business process improvements. Authoritatively reinvent cross-unit catalysts for change before high-quality outsourcing. Uniquely predominate technically sound web-readiness rather than cost effective solutions. Phosfluorescently synergize.</p>
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/about/team_3.jpg" alt="">
+                            <div class="box-center overlay-img ver4 social">
+                                <a href="#" title="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" title="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" title="google plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name"><a href="">Alice Manning</a></h3>
+                            <p class="team-career">DESIGNER</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-content">
-                    <a href="" onClick="return false;" class="faq-quest">How To Order A Gift Card?
-
-                </a>
-                    <span class="plus js-plus-icon"></span>
-                    <div class="faq-answer">
-                        <p>Completely network high standards in innovation whereas goal-oriented paradigms. Intrinsicly morph human capital via enabled convergence. Objectively pursue leading-edge web-readiness before market-driven paradigms. Competently disseminate go forward "outside the box" thinking before proactive expertise. Quickly incubate effective schemas through future-proof users.</p>
-                        <p>Professionally initiate alternative metrics before high standards in synergy. Quickly enable orthogonal technology for enabled sources. Dramatically evisculate functional web services via emerging human capital. Synergistically promote high-payoff niches and client-based niches. Appropriately mesh technically sound processes vis-a-vis exceptional meta-services.
-                        </p>
-                        <p>Intrinsicly re-engineer standards compliant potentialities with business process improvements. Authoritatively reinvent cross-unit catalysts for change before high-quality outsourcing. Uniquely predominate technically sound web-readiness rather than cost effective solutions. Phosfluorescently synergize.</p>
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/about/team_3.jpg" alt="">
+                            <div class="box-center overlay-img ver4 social">
+                                <a href="#" title="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" title="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" title="google plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name"><a href="">Alice Manning</a></h3>
+                            <p class="team-career">DESIGNER</p>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/about/team_3.jpg" alt="">
+                            <div class="box-center overlay-img ver4 social">
+                                <a href="#" title="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" title="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" title="google plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name"><a href="">Alice Manning</a></h3>
+                            <p class="team-career">DESIGNER</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,13 +458,14 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap-slider.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <a href="#" class="scroll_top">SCROLL TO TOP<span></span></a>
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-slider.min.js')}}"></script>
+    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>

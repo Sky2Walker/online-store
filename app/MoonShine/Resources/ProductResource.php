@@ -20,6 +20,7 @@ use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Fields\Number;
+use MoonShine\UI\Fields\Range;
 use MoonShine\UI\Fields\Text;
 use MoonShine\UI\Fields\Textarea;
 
@@ -56,7 +57,7 @@ class ProductResource extends ModelResource
                 Text::make('Description', 'description'),
                 Textarea::make('Additional information', 'additional_information'),
                 Slug::make('Slug', 'slug')->from('name')->readonly(),
-                Text::make('SKU', 'sku'),
+
 
                 Enum::make('Tags', 'tags')
                     ->options([
@@ -71,8 +72,7 @@ class ProductResource extends ModelResource
                 Image::make('Зображення ', 'product_img')->removable()
                     ->disk('public')
                     ->dir('upload/images'),
-                Text::make('Price', 'price'),
-
+                Number::make('Raitings','raitings')->min(0)->max(5)->stars(),
                 BelongsTo::make('Підкатегорії ', 'category', 'name')->sortable()->searchable(),
             ])
         ];
