@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Cosso - Clean, Minimal Responsive HTML Template</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/PlayfairDisplay/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/simple-line-icon/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/font-awesome/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{asset('css/owl.carousel.min.css')}}" type="image/png">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 </head>
 
 <body>
@@ -45,7 +50,7 @@
                     <div class="input-group">
                         <form method="get" class="searchform" action="/search" role="search">
                             <input type="hidden" name="type" value="product">
-                            <input type="text" name="q" class="form-control form-account control-search">
+                            <input type="text" name="q" class="form-control control-search">
                             <span class="input-group-btn">
                               <button class="btn btn-default button_search" type="button"><i data-toggle="dropdown" class="fa fa-search"></i></button>
                             </span>
@@ -162,9 +167,9 @@
                                                     <li class="level2 col-6">
                                                         <a href="#">Shop pages</a>
                                                         <ul class="menu-level-2 col-6">
-                                                            <li class="level3"><a href="cart_page_emty.html" title="Cart Empty">Cart Empty</a></li>
+                                                            <li class="level3"><a href="cart_page_emty.blade.php" title="Cart Empty">Cart Empty</a></li>
                                                             <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                                            <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
+                                                            <li class="level3"><a href="checkout.blade.php" title="Checkout">Checkout</a></li>
                                                         </ul>
                                                         <div class="mega-product col-6">
                                                             <a href="#"><img src="img/mega_1.jpg" alt="" class="img-responsive"></a>
@@ -179,7 +184,7 @@
                                                             <li class="level3"><a href="single_product_downloadable.html" title="Product Downloadable">Product — Downloadable</a></li>
                                                             <li class="level3"><a href="single_Product_Grouped.html" title="Product Grouped">Product — Grouped</a></li>
                                                             <li class="level3"><a href="single_product_affiliate.html" title="Product Affiliate">Product — External / Affiliate</a></li>
-                                                            <li class="level3"><a href="single_product_bundle.html" title="Product bundle">Product with bundle</a></li>
+                                                            <li class="level3"><a href="single_product_bundle.blade.php" title="Product bundle">Product with bundle</a></li>
                                                             <li class="level3"><a href="single_product_360.html" title="Product 360">Product 360 Degree View</a></li>
                                                             <li class="level3"><a href="single_product_video.html" title="Product Featured Video">Product Video</a></li>
                                                             <li class="level3"><a href="single_product_fullwidth.html" title="Product Fullwidth">Product Fullwidth</a></li>
@@ -199,7 +204,7 @@
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
                                                 <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                                                <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                                <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                                             </ul>
                                         </li>
                                         <li class="level1 dropdown hassub">
@@ -210,15 +215,15 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Other Pages</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="about_agency.html" title="About Agency">About Agency</a></li>
-                                                            <li class="level3"><a href="about_shop.html" title="About Designer">About Designer</a></li>
-                                                            <li class="level3"><a href="about-designer.html" title="About Shop">About Shop</a></li>
+                                                            <li class="level3"><a href="about_agency.blade.php" title="About Agency">About Agency</a></li>
+                                                            <li class="level3"><a href="about_shop.blade.php" title="About Designer">About Designer</a></li>
+                                                            <li class="level3"><a href="about-designer.blade.php" title="About Shop">About Shop</a></li>
                                                             <li class="level3"><a href="commingsoon.html" title="Commingsoon">Commingsoon</a></li>
                                                             <li class="level3"><a href="contact_gmap.html" title="Contact_Map">Contact Map</a></li>
-                                                            <li class="level3"><a href="contact_simple.html" title="Contact_Simple">Contact Simple</a></li>
-                                                            <li class="level3"><a href="faq.html" title="FAQs">FAQs</a></li>
-                                                            <li class="level3"><a href="our_teams.html" title="Our teams">Our teams</a></li>
-                                                            <li class="level3"><a href="404.html" title="404 pages">404 page</a></li>
+                                                            <li class="level3"><a href="contact_simple.blade.php" title="Contact_Simple">Contact Simple</a></li>
+                                                            <li class="level3"><a href="faq.blade.php" title="FAQs">FAQs</a></li>
+                                                            <li class="level3"><a href="our_teams.blade.php" title="Our teams">Our teams</a></li>
+                                                            <li class="level3"><a href="404.blade.php" title="404 pages">404 page</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="level2 col-3">
@@ -239,7 +244,7 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Lookbook</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="lookbook_grid.html" title="Lookbook Grid">Lookbook Grid</a></li>
+                                                            <li class="level3"><a href="lookbook_grid.blade.php" title="Lookbook Grid">Lookbook Grid</a></li>
                                                             <li class="level3"><a href="lookbook_masonry.html" title="Lookbook Masonry">Lookbook Masonry</a></li>
                                                             <li class="level3"><a href="lookbook_popup.html" title="Lookbook Popup">Lookbook Popup</a></li>
                                                         </ul>
@@ -252,7 +257,7 @@
                                             <a href="#">Elements</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                                                <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                                             </ul>
@@ -268,7 +273,7 @@
                                                 <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                                                 <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                                                 <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                                                <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                                                <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                                                 <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                                             </ul>
                                         </li>
@@ -284,237 +289,91 @@
         <div class="main-content space-padding-tb-70">
             <div class="container">
                 <div class="row">
-                    <div class="checkout-login col-xs-12 col-sm-6">
-                        <div class="box-toggle box-login">
-                            Returning customer?
-                            <a class="show-login js-showlogin">Click here to login</a>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="customer-page">
+                            <div class="title-page">
+                                <h3>Login</h3>
+                            </div>
+                            <form method="post" class="form-customer form-login">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Username or email address *</label>
+                                    <input type="email" class="form-control form-account" id="exampleInputEmail1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password *</label>
+                                    <input type="password" class="form-control form-account" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-check">
+                                    <button type="submit" class="btn-login hover-white">Login</button>
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span>Remember me</span>
+                                    </label>
+                                    <a href="" class="lost-password">Lost your password?</a>
+                                </div>
+                            </form>
+                            <span class="divider"></span>
+                            <a href="" class="btn link-button create-account hover-black">Create an account</a>
                         </div>
-                        <form method="post" class="form-customer form-login js-openlogin">
-                            <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.</p>
-                            <div class="form-group ">
-                                <label for="exampleInputEmail1">Username or email address *</label>
-                                <input type="email" class="form-control form-account form-account" id="exampleInputEmail1">
-                            </div>
-                            <div class="form-group ">
-                                <label for="exampleInputPassword1">Password *</label>
-                                <input type="password" class="form-control form-account form-account" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-check ">
-                                <button type="submit" class="btn-login hover-white">Login</button>
-                                <label class="form-check-label ">
-                                    <input type="checkbox" class="form-check-input">
-                                    <span>Remember me</span>
-                                </label>
-                                <a href=" " class="lost-password ">Lost your password?</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class=" col-xs-12 col-sm-6 checkout-cp ">
-                        <div class="box-toggle box-coupon ">
-                            Have a coupon?
-                            <a class="show-login js-showcp">Click here to enter your code</a>
-                        </div>
-                        <form class="form-cp js-opencp">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-account input-cart" id="inputfname_1" placeholder="Coupon Code">
-                            </div>
-                            <button value="Submit" class="btn link-button-v2 hover-white color-red btn-cp-inline" type="submit">Apply</button>
-                        </form>
-                    </div>
-                </div>
-                <form name="checkout" method="post" class="checkout">
-                    <div class="cart-box-container-ver2">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h3>Billing Details</h3>
-                                <div class="row form-customer">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputfname_2" class=" control-label">First Name *</label>
-                                        <input type="text" id="inputfname_2" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputlname" class=" control-label">Last Name *</label>
-                                        <input type="text" id="inputlname" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputcompany" class=" control-label">Company Name</label>
-                                        <input type="text" id="inputcompany" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputemail" class=" control-label">Email Address *</label>
-                                        <input type="text" id="inputemail" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputphone" class=" control-label">Phone *</label>
-                                        <input type="text" id="inputphone" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label class="control-label">Country *</label>
-                                        <select name="inputcountry1" class="country form-control form-account">
-                                            <option selected>Select Country</option>
-                                            <option>COUNTRY 2</option>
-                                            <option>COUNTRY 1</option>
-                                            <option>COUNTRY 3</option>
-                                            <option>COUNTRY 4</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputstreet" class=" control-label">Address *</label>
-                                        <input type="text" id="inputstreet" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputpostcode" class=" control-label">Postcode / ZIP</label>
-                                        <input type="text" id="inputpostcode" class="form-control form-account">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputfState" class=" control-label">Town / City *</label>
-                                        <input type="text" id="inputfState" class="form-control form-account">
-                                    </div>
-                                    <div class="form-check col-md-12">
-                                        <label class="form-check-label ver2">
-                                            <input type="checkbox" class="form-check-input">
-                                            <span>Create an account?</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <h3>Shipping Details</h3>
-                                <div class="row form-customer">
-                                    <div class="form-check col-md-12">
-                                        <label class="form-check-label ver2">
-                                            <input type="checkbox" class="form-check-input">
-                                            <span>Ship to a different address?</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputfState" class=" control-label">Order Notes</label>
-                                        <textarea name="message" rows="5" id="message" class="form-control form-note" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End contact-form -->
-                            <div class="col-md-4">
-                                <h3>Your order</h3>
-                                <div class="cart-list">
-                                    <ul class="list">
-                                        <li class="flex">
-                                            <a href="#" title="" class="cart-product-image"><img src="img/cart_1.jpg" alt="Product"></a>
-                                            <div class="text">
-                                                <p class="product-name">Rose Gold Natural Band Watch</p>
-                                                <div class="quantity">x1</div>
-                                                <p class="product-price">$295.00</p>
-                                            </div>
-                                        </li>
-                                        <li class="flex">
-                                            <a href="#" title="" class="cart-product-image"><img src="img/cart_1.jpg" alt="Product"></a>
-                                            <div class="text">
-                                                <p class="product-name">Dot Drop Earrings</p>
-                                                <div class="quantity">x1</div>
-                                                <p class="product-price">$295.00</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h3>Cart Totals</h3>
-                                <div class="text-price">
-                                    <ul>
-                                        <li><span class="text">Subtotal</span><span class="number">$560.00</span></li>
-                                        <li><span class="text">Shipping</span>
-                                            <div class="payment">
-
-                                                    <input type="radio" name="gender" value="Flat" id="radio1" checked="checked">
-                                                    <label for="radio1">Free Shipping</label>
-                                                    <input type="radio" name="gender" value="Free" id="radio2">
-                                                    <label for="radio2">Standard <span class="number">$20.00</span></label>
-                                                    <input type="radio" name="gender" value="Delivery" id="radio3">
-                                                    <label for="radio3">Local Pickup</label>
-
-                                            </div>
-                                        </li>
-                                        <li><span class="text calculate">Calculate shipping</span>
-                                            <div class="zipcode">
-                                                <input type="text" class="form-control form-account input-cart" placeholder="Zipcode">
-                                            </div>
-                                        </li>
-                                        <li><span class="text">Totals</span><span class="number">$89.00</span></li>
-                                    </ul>
-                                </div>
-                                <div class="text-price box-payment">
-                                    <ul>
-                                        <li>
-                                            <div class="payment">
-
-                                                    <input type="radio" name="gender" value="Flat" id="radio4" checked="checked">
-                                                    <label for="radio4">Check Payments</label>
-                                                    <p class="no-checkbox">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                    <input type="radio" name="gender" value="Free" id="radio5">
-                                                    <label for="radio5">Paypal <img src="img/cart/paypal-icon.jpg" alt=""></label>
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a class="btn link-button hover-white btn-checkout" href="#" title="Proceed to checkout">Place order</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </form>
-        </div>
-    </div>
-    <!-- end main content-->
-    <footer>
-        <div class="container container-42 ">
-            <div class="row ">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
-                    <div class="menu-footer ">
-                        <ul>
-                            <li><a href="# ">Shipping</a></li>
-                            <li><a href="# ">Terms & Conditions</a></li>
-                            <li><a href="# ">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
-                    <div class="newletter-form ">
-                        <h3 class="footer-title text-center ">Newsletter</h3>
-                        <form action="# ">
-                            <input type="text" name="s " placeholder="Email Adress... " class="form-control form-account">
-                            <button type="submit" class="btn btn-submit">
-                                <i class="fa fa-angle-right "></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 ">
-                    <div class="social ">
-                        <a href="# " title="twitter ">
-                                <i class="fa fa-twitter "></i>
-                            </a>
-                        <a href="# " title="facebook ">
-                                <i class="fa fa-facebook "></i>
-                            </a>
-                        <a href="# " title="google plus ">
-                                <i class="fa fa-google-plus "></i>
-                            </a>
-                        <a href="# " title="Pinterest ">
-                                <i class="fa fa-pinterest-p "></i>
-                            </a>
-                        <a href="# " title="rss ">
-                                <i class="fa fa-rss "></i>
-                            </a>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+        <!-- end main content-->
+        <footer>
+            <div class="container container-42">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="menu-footer">
+                            <ul>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="newletter-form">
+                            <h3 class="footer-title text-center">Newsletter</h3>
+                            <form action="#">
+                                <input type="text" name="s" placeholder="Email Adress..." class="form-control">
+                                <button type="submit" class="btn btn-submit">
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="social">
+                            <a href="#" title="twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                            <a href="#" title="facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                            <a href="#" title="google plus">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                            <a href="#" title="Pinterest">
+                            <i class="fa fa-pinterest-p"></i>
+                        </a>
+                            <a href="#" title="rss">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <a href="#" class="scroll_top">SCROLL TO TOP<span></span></a>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-slider.min.js')}}"></script>
+    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>

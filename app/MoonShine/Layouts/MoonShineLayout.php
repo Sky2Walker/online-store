@@ -38,6 +38,7 @@ use App\MoonShine\Resources\SizeResource;
 use App\MoonShine\Resources\ColorResource;
 use App\MoonShine\Resources\MaterialResource;
 use App\MoonShine\Resources\ProductVariantResource;
+use App\MoonShine\Resources\HomePageSliderResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -59,6 +60,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Colors', ColorResource::class),
             MenuItem::make('Materials', MaterialResource::class),
             MenuItem::make('ProductVariants', ProductVariantResource::class),
+            MenuItem::make('HomePageSliders', HomePageSliderResource::class),
         ];
     }
 

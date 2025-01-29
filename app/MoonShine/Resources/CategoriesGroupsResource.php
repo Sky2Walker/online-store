@@ -10,6 +10,7 @@ use App\Models\CategoriesGroups;
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Fields\Slug;
 use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\UI\Components\Boolean;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\Checkbox;
 use MoonShine\UI\Fields\Field;
@@ -37,6 +38,7 @@ class CategoriesGroupsResource extends ModelResource
             ID::make()->sortable(),
             Text::make('Name', 'name'),
             Checkbox::make('Активно', 'is_active'),
+            Checkbox::make('On home page', 'onMainMenu'),
         ];
     }
 
@@ -56,6 +58,7 @@ class CategoriesGroupsResource extends ModelResource
                     ->dir('upload/images'),
                 Checkbox::make('Активно', 'is_active'),
                 Slug::make('Slug', 'slug')->from('name')->readonly(),
+                Checkbox::make('On home page', 'onMainMenu'),
 
             ])
         ];
@@ -76,7 +79,7 @@ class CategoriesGroupsResource extends ModelResource
                 ->dir('upload/images'),
             Checkbox::make('Активно', 'is_active'),
             Slug::make('Slug', 'slug')->from('name')->readonly(),
-
+            Checkbox::make('On home page', 'onMainMenu'),
         ];
     }
 

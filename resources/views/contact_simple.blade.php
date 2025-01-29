@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Cosso - Clean, Minimal Responsive HTML Template</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/PlayfairDisplay/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/simple-line-icon/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/font-awesome/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{asset('css/owl.carousel.min.css')}}" type="image/png">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 </head>
 
 <body>
@@ -162,9 +167,9 @@
                                                     <li class="level2 col-6">
                                                         <a href="#">Shop pages</a>
                                                         <ul class="menu-level-2 col-6">
-                                                            <li class="level3"><a href="cart_page_emty.html" title="Cart Empty">Cart Empty</a></li>
+                                                            <li class="level3"><a href="cart_page_emty.blade.php" title="Cart Empty">Cart Empty</a></li>
                                                             <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                                            <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
+                                                            <li class="level3"><a href="checkout.blade.php" title="Checkout">Checkout</a></li>
                                                         </ul>
                                                         <div class="mega-product col-6">
                                                             <a href="#"><img src="img/mega_1.jpg" alt="" class="img-responsive"></a>
@@ -179,7 +184,7 @@
                                                             <li class="level3"><a href="single_product_downloadable.html" title="Product Downloadable">Product — Downloadable</a></li>
                                                             <li class="level3"><a href="single_Product_Grouped.html" title="Product Grouped">Product — Grouped</a></li>
                                                             <li class="level3"><a href="single_product_affiliate.html" title="Product Affiliate">Product — External / Affiliate</a></li>
-                                                            <li class="level3"><a href="single_product_bundle.html" title="Product bundle">Product with bundle</a></li>
+                                                            <li class="level3"><a href="single_product_bundle.blade.php" title="Product bundle">Product with bundle</a></li>
                                                             <li class="level3"><a href="single_product_360.html" title="Product 360">Product 360 Degree View</a></li>
                                                             <li class="level3"><a href="single_product_video.html" title="Product Featured Video">Product Video</a></li>
                                                             <li class="level3"><a href="single_product_fullwidth.html" title="Product Fullwidth">Product Fullwidth</a></li>
@@ -198,8 +203,8 @@
                                             <a href="#">Pages</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                                                <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                                                <li class="level2"><a href="login.blade.php" title="Login">Login</a></li>
+                                                <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                                             </ul>
                                         </li>
                                         <li class="level1 dropdown hassub">
@@ -210,15 +215,15 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Other Pages</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="about_agency.html" title="About Agency">About Agency</a></li>
-                                                            <li class="level3"><a href="about_shop.html" title="About Designer">About Designer</a></li>
-                                                            <li class="level3"><a href="about-designer.html" title="About Shop">About Shop</a></li>
+                                                            <li class="level3"><a href="about_agency.blade.php" title="About Agency">About Agency</a></li>
+                                                            <li class="level3"><a href="about_shop.blade.php" title="About Designer">About Designer</a></li>
+                                                            <li class="level3"><a href="about-designer.blade.php" title="About Shop">About Shop</a></li>
                                                             <li class="level3"><a href="commingsoon.html" title="Commingsoon">Commingsoon</a></li>
                                                             <li class="level3"><a href="contact_gmap.html" title="Contact_Map">Contact Map</a></li>
                                                             <li class="level3"><a href="contact_simple.html" title="Contact_Simple">Contact Simple</a></li>
-                                                            <li class="level3"><a href="faq.html" title="FAQs">FAQs</a></li>
-                                                            <li class="level3"><a href="our_teams.html" title="Our teams">Our teams</a></li>
-                                                            <li class="level3"><a href="404.html" title="404 pages">404 page</a></li>
+                                                            <li class="level3"><a href="faq.blade.php" title="FAQs">FAQs</a></li>
+                                                            <li class="level3"><a href="our_teams.blade.php" title="Our teams">Our teams</a></li>
+                                                            <li class="level3"><a href="404.blade.php" title="404 pages">404 page</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="level2 col-3">
@@ -239,7 +244,7 @@
                                                     <li class="level2 col-3">
                                                         <a href="#">Lookbook</a>
                                                         <ul class="menu-level-2">
-                                                            <li class="level3"><a href="lookbook_grid.html" title="Lookbook Grid">Lookbook Grid</a></li>
+                                                            <li class="level3"><a href="lookbook_grid.blade.php" title="Lookbook Grid">Lookbook Grid</a></li>
                                                             <li class="level3"><a href="lookbook_masonry.html" title="Lookbook Masonry">Lookbook Masonry</a></li>
                                                             <li class="level3"><a href="lookbook_popup.html" title="Lookbook Popup">Lookbook Popup</a></li>
                                                         </ul>
@@ -252,7 +257,7 @@
                                             <a href="#">Elements</a>
                                             <span class="plus js-plus-icon"></span>
                                             <ul class="dropdown-menu menu-level-1">
-                                                <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                                                <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                                                 <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                                             </ul>
@@ -268,7 +273,7 @@
                                                 <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                                                 <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                                                 <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                                                <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                                                <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                                                 <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                                             </ul>
                                         </li>
@@ -281,40 +286,64 @@
             </div>
         </header>
         <!-- /header -->
-        <div class="main-content space-padding-tb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="customer-page">
-                            <div class="title-page">
-                                <h3>Login</h3>
-                            </div>
-                            <form method="post" class="form-customer form-login">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Username or email address *</label>
-                                    <input type="email" class="form-control form-account" id="exampleInputEmail1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password *</label>
-                                    <input type="password" class="form-control form-account" id="exampleInputPassword1">
-                                </div>
-                                <div class="form-check">
-                                    <button type="submit" class="btn-login hover-white">Login</button>
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        <span>Remember me</span>
-                                    </label>
-                                    <a href="" class="lost-password">Lost your password?</a>
-                                </div>
-                            </form>
-                            <span class="divider"></span>
-                            <a href="" class="btn link-button create-account hover-black">Create an account</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="hero-section v3">
+            <img src="img/about/about_simple_bg.jpg" alt="" class="img-responsive">
+            <div class="box-center">
+                <h1 class="page-title">Contact</h1>
+                <ul class="breadcrumb">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Elements</a></li>
+                    <li><a href="">Banner</a></li>
+                </ul>
             </div>
         </div>
-        <!-- end main content-->
+        <div class="container">
+            <div class="contact about_simple">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <h2 class="about-title">Cosso Store NY</h2>
+                        <p class="address">3100 West Cary Street Richmond, Virginia 23221 P: 804.355.4383 F: 804.367.7901</p>
+                        <p>Store Hours</p>
+                        <p class="hours">Monday–Saturday 11am–7pm ET Sunday 11am–6pm ET</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h2 class="about-title">Cosso Store FR</h2>
+                        <p class="address">3100 West Cary Street Richmond, Virginia 23221 P: 804.355.4383 F: 804.367.7901</p>
+                        <p>Store Hours</p>
+                        <p class="hours">Monday–Saturday 11am–7pm ET Sunday 11am–6pm ET</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h2 class="about-title">Cosso Store LD</h2>
+                        <p class="address">3100 West Cary Street Richmond, Virginia 23221 P: 804.355.4383 F: 804.367.7901</p>
+                        <p>Store Hours</p>
+                        <p class="hours">Monday–Saturday 11am–7pm ET Sunday 11am–6pm ET</p>
+                    </div>
+                </div>
+                <form action="#" class="comment-form contact-form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <label>Name *</label>
+                                <input type="text" name="first_name" class="form-control" value="">
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <label>Email *</label>
+                                <input type="text" name="last_name" class="form-control" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Message</label>
+                                <textarea name="note" id="message" tabindex="2" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit ver2">Send</button>
+                </form>
+            </div>
+        </div>
         <footer>
             <div class="container container-42">
                 <div class="row">
@@ -362,12 +391,13 @@
         </footer>
     </div>
     <a href="#" class="scroll_top">SCROLL TO TOP<span></span></a>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-slider.min.js')}}"></script>
+    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>
