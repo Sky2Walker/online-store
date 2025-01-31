@@ -9,12 +9,12 @@ use App\Services\ProductService;
 use App\Services\CategoriesGroupsService;
 class ShopController extends Controller
 {
-    protected $productService, $categoryService;
 
-    public function __construct(ProductService $productService, CategoriesGroupsService $categoryService){
-        $this->productService = $productService;
-        $this->categoryService = $categoryService;
-    }
+
+    public function __construct(
+        protected  ProductService $productService,
+        protected  CategoriesGroupsService $categoryService
+    ){}
 
 
     public function index(){
@@ -32,8 +32,9 @@ class ShopController extends Controller
     // репозиторий категорий, в нем ты получаешь категорию и по связи получаешь ее продукты с пагинацией
     // ОБЯЗАТЕЛЬНО во всех выборках и продуктов и категории использовать select и paginate
     // категорию можно получать по slug из урла, откуда ты выкопаешь ее айдишник
-    public function showProductByTheySubCategories($id){
-        $products = $this ->productService->getProductBySubCategoryId($id);
+    public function getProductByCategoriesGroupsSlug($categorisGroupsSlug){
+        $products = $this ->categoryService->getProductsByCategoriesGroups($categorisGroupsSlug);
+
         return view('shop', compact('products'));
     }
 }

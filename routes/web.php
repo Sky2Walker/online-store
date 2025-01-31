@@ -9,5 +9,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/shop', [ShopController::class, 'index']);
 Route::get('/blog',[BlogController::class, 'index']);
-// TODO убрать или доделать
-Route::get('')
+Route::get('/category/{slug}', [ShopController::class, 'getProductByCategoriesGroupsSlug']);
+
+

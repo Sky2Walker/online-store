@@ -6,21 +6,19 @@ use App\Models\Product;
 
 class ProductRepository
 {
-    protected $productModel;
 
-    public function __construct(Product $productModel)
-    {
-        $this->productModel = $productModel;
-    }
+
+    public function __construct(
+        protected Product $productModel
+    ){}
 
     public function getAllProducts(){
         // TODO добавить ::query()->select(['id', ....]) полей, которые нужны
         // TODO сделать пагинацию или limit(), никаких all нигде
-        return $this->productModel->all();
+        // TODO Как быть с ценами?
+        return $this->productModel::query()->select(['id','name','category_id','product_img', 'raitings'])->paginate(20);
     }
 
-    public function getProductBySubCategoryId($subCategoryId){
-        return $this->productModel->category()->where('category_id', $subCategoryId)->firstOrFail();
-    }
+
 
 }

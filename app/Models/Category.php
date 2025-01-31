@@ -10,8 +10,8 @@ class Category extends Model
     use HasFactory;
     protected $table = 'categories';
 
-    // TODO камелкейс в названиях методов
-    public function categories_groups(){
+
+    public function categoriesGroups(){
         return $this->hasMany(CategoriesGroups::class, 'category_id');
     }
 

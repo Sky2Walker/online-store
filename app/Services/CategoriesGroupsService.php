@@ -6,17 +6,21 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoriesGroupsService
 {
-    protected $categoriesGroupsRepository;
 
-    public function __construct(CategoriesGroupsRepository $categoriesGroupsRepository){
-        $this->categoriesGroupsRepository = $categoriesGroupsRepository;
-    }
+
+    public function __construct(
+        protected CategoriesGroupsRepository $categoriesGroupsRepository
+    ){}
 
     public function getAllCategoriesGroups(){
 
-        $categoriesGroups = Cache::remember('categoriesGroups:all', 3600, function(){
+        $categoriesGroups = Cache::remember('categoriesGroups:all', 'CACHE_LIFETIME', function(){
             return $this->categoriesGroupsRepository->getAll();
         });
         return $categoriesGroups;
+    }
+
+    public function getProductsByCategoriesGroups($categorisGroupsSlug){
+        return $this->categoriesGroupsRepository->getProductsByCategoriesGroups($categorisGroupsSlug);
     }
 }

@@ -6,12 +6,12 @@ use App\Models\HomePageSlider;
 
 class HomePageSliderRepository
 {
-    protected $homePageSliderModel;
-    public function __construct(HomePageSlider $homePageSliderModel){
-        $this->homePageSliderModel = $homePageSliderModel;
-    }
+
+    public function __construct(
+        protected   HomePageSlider $homePageSliderModel
+    ){}
 
     public function getAll(){
-        return $this->homePageSliderModel->all();
+        return $this->homePageSliderModel::query()->select('title', 'img','isActive')->paginate(4);
     }
 }

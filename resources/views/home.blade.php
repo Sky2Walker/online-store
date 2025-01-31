@@ -296,7 +296,7 @@
                         <div class="box-category text-center">
                             <img src="{{ asset('storage/' . $categoriesGroup->category_img) }}" alt="" class="img-reponsive">
                             <div class="box-category-name">
-                                <a href="">{{$categoriesGroup->name}}</a>
+                                <a href="{{ url('category/'.$categoriesGroup->slug) }}">{{$categoriesGroup->name}}</a>
                             </div>
                         </div>
                     </div>

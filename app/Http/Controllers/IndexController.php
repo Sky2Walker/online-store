@@ -34,4 +34,6 @@ class IndexController extends Controller
 
         return view('home', compact('categoriesGroups', 'products', 'homePageSlider'));
     }
+
+
 }

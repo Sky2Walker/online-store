@@ -8,25 +8,23 @@ use Illuminate\Support\Facades\Redis;
 
 class ProductService
 {
-    protected $productRepository;
 
-    public function __construct(ProductRepository $productRepository)
-    {
-        $this->productRepository = $productRepository;
-    }
+
+    public function __construct(
+        protected   ProductRepository $productRepository
+    )
+    {}
 
     public function getAllProducts()
     {
 
-        $products = Cache::remember('products:all', 60*60, function () {
+        $products = Cache::remember('products:all', 'CACHE_LIFETIME', function () {
            return $this->productRepository->getAllProducts();
         });
         return $products;
     }
 
-    public function getProductBySubCategoryId($subCategoryId){
-        return $products = $this->productRepository->getProductBySubCategoryId($subCategoryId);
-    }
+
 
 
 }
