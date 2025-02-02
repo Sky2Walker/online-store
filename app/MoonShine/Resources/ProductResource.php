@@ -72,7 +72,7 @@ class ProductResource extends ModelResource
                 Image::make('Зображення ', 'product_img')->removable()
                     ->disk('public')
                     ->dir('upload/images'),
-                Number::make('Raitings','raitings')->min(0)->max(5)->stars(),
+                Number::make('Ratings','ratings')->min(0)->max(5)->stars(),
                 BelongsTo::make('Підкатегорії ', 'category', 'name')->sortable()->searchable(),
             ])
         ];

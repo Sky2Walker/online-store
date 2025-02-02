@@ -32,8 +32,9 @@ class ShopController extends Controller
     // репозиторий категорий, в нем ты получаешь категорию и по связи получаешь ее продукты с пагинацией
     // ОБЯЗАТЕЛЬНО во всех выборках и продуктов и категории использовать select и paginate
     // категорию можно получать по slug из урла, откуда ты выкопаешь ее айдишник
-    public function getProductByCategoriesGroupsSlug($categorisGroupsSlug){
-        $products = $this ->categoryService->getProductsByCategoriesGroups($categorisGroupsSlug);
+    public function getCategoryGroup($categoriesGroupSlug, $perPage = 20){
+
+        $products = $this ->categoryService->getCategoryGroup($categoriesGroupSlug, $perPage);
 
         return view('shop', compact('products'));
     }

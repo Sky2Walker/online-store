@@ -16,7 +16,7 @@ class ProductRepository
         // TODO добавить ::query()->select(['id', ....]) полей, которые нужны
         // TODO сделать пагинацию или limit(), никаких all нигде
         // TODO Как быть с ценами?
-        return $this->productModel::query()->select(['id','name','category_id','product_img', 'raitings'])->paginate(20);
+        return $this->productModel::query()->select(['id','name','category_id','product_img', 'ratings'])->paginate(20);
     }
 
 

@@ -17,6 +17,11 @@ class Color extends Model
 
 
     public function productColors() :HasManyThrough{
-        return $this ->hasManyThrough(Product::class, ProductVariant::class);
+        return $this ->hasManyThrough(Product::class, ProductVariant::class,
+        'color_id',
+            'product_id',
+            'id',
+            'id'
+        );
     }
 }

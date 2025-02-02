@@ -46,7 +46,8 @@ class HomePageSliderResource extends ModelResource
             Box::make([
                 ID::make(),
                 Text::make('Title', 'title'),
-                Image::make('Image', 'img'),
+                Image::make('Image', 'img')
+                    ->allowedExtensions(['jpeg', 'png', 'WebP', 'JPG']),
                 Checkbox::make('Active', 'isActive'),
             ])
         ];

@@ -20,7 +20,7 @@ class CategoriesGroupsService
         return $categoriesGroups;
     }
 
-    public function getProductsByCategoriesGroups($categorisGroupsSlug){
-        return $this->categoriesGroupsRepository->getProductsByCategoriesGroups($categorisGroupsSlug);
+    public function getCategoryGroup($categoriesGroupSlug, $perPage){
+        return $this->categoriesGroupsRepository->getCategoryGroup($categoriesGroupSlug, $perPage);
     }
 }

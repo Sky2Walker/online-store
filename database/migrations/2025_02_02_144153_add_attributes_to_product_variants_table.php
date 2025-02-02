@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->integer('ratings')->default(0);
+        Schema::table('product_variants', function (Blueprint $table) {
+            $table->string('sku', 50)->unique()->nullable(false)->change();
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('ratings');
+        Schema::table('product_variants', function (Blueprint $table) {
+            //
         });
     }
 };

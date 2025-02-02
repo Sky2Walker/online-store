@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->integer('ratings')->default(0);
+        Schema::table('home_page_sliders', function (Blueprint $table) {
+            $table->string('title', 256)->change();
+            $table->boolean('isActive')->default(0)->change();
         });
     }
 
@@ -21,8 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('ratings');
+        Schema::table('home_page_sliders', function (Blueprint $table) {
+            //
         });
     }
 };
