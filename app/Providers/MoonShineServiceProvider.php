@@ -18,6 +18,7 @@ use App\MoonShine\Resources\SizeResource;
 use App\MoonShine\Resources\ColorResource;
 use App\MoonShine\Resources\MaterialResource;
 use App\MoonShine\Resources\ProductVariantResource;
+use App\MoonShine\Resources\HomePageSliderResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 ColorResource::class,
                 MaterialResource::class,
                 ProductVariantResource::class,
+                HomePageSliderResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

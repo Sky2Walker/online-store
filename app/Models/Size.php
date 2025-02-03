@@ -10,12 +10,18 @@ class Size extends Model
 {
     protected $table = 'sizes';
 
-    public function sizeToProductVariants() : HasMany{
+    public function sizeToProductVariants(): HasMany
+    {
         return $this->hasMany(ProductVariant::class, 'size_id');
     }
 
-    public function prodductSizes() : HasManyThrough
+
+    public function productSizes(): HasManyThrough
     {
-        return $this->hasManyThrough(Product::class, ProductVariant::class);
+        return $this->hasManyThrough(Product::class, ProductVariant::class,
+            'size_id',
+            'product_id',
+            'id',
+            'id');
     }
 }

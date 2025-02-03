@@ -38,6 +38,7 @@ use App\MoonShine\Resources\SizeResource;
 use App\MoonShine\Resources\ColorResource;
 use App\MoonShine\Resources\MaterialResource;
 use App\MoonShine\Resources\ProductVariantResource;
+use App\MoonShine\Resources\HomePageSliderResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -53,12 +54,13 @@ final class MoonShineLayout extends AppLayout
         return [
             ...parent::menu(),
             MenuItem::make('Categories', CategoryResource::class),
-            MenuItem::make('CategoriesGroups', CategoriesGroupsResource::class),
+            MenuItem::make('CategoryGroup', CategoriesGroupsResource::class),
             MenuItem::make('Products', ProductResource::class),
             MenuItem::make('Sizes', SizeResource::class),
             MenuItem::make('Colors', ColorResource::class),
             MenuItem::make('Materials', MaterialResource::class),
             MenuItem::make('ProductVariants', ProductVariantResource::class),
+            MenuItem::make('HomePageSliders', HomePageSliderResource::class),
         ];
     }
 

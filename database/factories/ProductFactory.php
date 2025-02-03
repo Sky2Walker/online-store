@@ -19,8 +19,6 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'category_id' => $this->faker->numberBetween(1,10),
-            'price' => $this->faker->randomFloat(2,0,1000),
-            'sku' => $this->faker->numberBetween(1,100),
             'slug' => $this->faker->slug(),
             'tags' => $this->faker->word(),
             'product_img' => $this->faker->imageUrl(),

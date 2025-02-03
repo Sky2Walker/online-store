@@ -102,6 +102,7 @@ return [
     | that reason, you may prefix every cache key to avoid collisions.
     |
     */
+    'lifetime' => env('CACHE_LIFETIME'),
 
     'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
 
