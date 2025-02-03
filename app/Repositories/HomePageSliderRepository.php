@@ -8,10 +8,13 @@ class HomePageSliderRepository
 {
 
     public function __construct(
-        protected   HomePageSlider $homePageSliderModel
-    ){}
+        protected HomePageSlider $homePageSliderModel
+    )
+    {
+    }
 
-    public function getAll(){
-        return $this->homePageSliderModel::query()->select('title', 'img','isActive')->paginate(4);
+    public function getAll()
+    {
+        return $this->homePageSliderModel::query()->select('title', 'img', 'is_active')->paginate(4);
     }
 }

@@ -11,20 +11,19 @@ class ProductService
 
 
     public function __construct(
-        protected   ProductRepository $productRepository
+        protected ProductRepository $productRepository
     )
-    {}
+    {
+    }
 
     public function getAllProducts()
     {
 
         $products = Cache::remember('products:all', config('cache.lifetime'), function () {
-           return $this->productRepository->getAllProducts();
+            return $this->productRepository->getAllProducts();
         });
         return $products;
     }
-
-
 
 
 }

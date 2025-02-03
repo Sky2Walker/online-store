@@ -10,15 +10,16 @@ class Color extends Model
 {
     protected $table = 'colors';
 
-    public function colorsToProductVariants() : HasMany
+    public function colorsToProductVariants(): HasMany
     {
         return $this->hasMany(ProductVariant::class, 'color_id');
     }
 
 
-    public function productColors() :HasManyThrough{
-        return $this ->hasManyThrough(Product::class, ProductVariant::class,
-        'color_id',
+    public function productColors(): HasManyThrough
+    {
+        return $this->hasManyThrough(Product::class, ProductVariant::class,
+            'color_id',
             'product_id',
             'id',
             'id'

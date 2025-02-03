@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\CategoriesGroups;
+use App\Models\CategoryGroup;
 
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Fields\Slug;
@@ -21,11 +21,11 @@ use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Fields\Text;
 
 /**
- * @extends ModelResource<CategoriesGroups>
+ * @extends ModelResource<CategoryGroup>
  */
 class CategoriesGroupsResource extends ModelResource
 {
-    protected string $model = CategoriesGroups::class;
+    protected string $model = CategoryGroup::class;
 
     protected string $title = 'Під категорії';
 
@@ -38,7 +38,7 @@ class CategoriesGroupsResource extends ModelResource
             ID::make()->sortable(),
             Text::make('Name', 'name'),
             Checkbox::make('Активно', 'is_active'),
-            Checkbox::make('On home page', 'onMainMenu'),
+            Checkbox::make('On home page', 'is_on_main_menu'),
         ];
     }
 
@@ -51,14 +51,14 @@ class CategoriesGroupsResource extends ModelResource
             Box::make([
                 ID::make(),
                 Text::make('Name', 'name'),
-                BelongsTo::make('Sub Category',  'categories', 'name', resource: CategoryResource::class)
+                BelongsTo::make('Sub Category', 'categories', 'name', resource: CategoryResource::class)
                     ->searchable(),
-                Image::make('Зображення категорії', 'category_img')->removable()
+                Image::make('Зображення категорії', 'img')->removable()
                     ->disk('public')
                     ->dir('upload/images'),
                 Checkbox::make('Активно', 'is_active'),
                 Slug::make('Slug', 'slug')->from('name')->readonly(),
-                Checkbox::make('On home page', 'onMainMenu'),
+                Checkbox::make('On home page', 'is_on_main_menu'),
 
             ])
         ];
@@ -72,19 +72,19 @@ class CategoriesGroupsResource extends ModelResource
         return [
             ID::make(),
             Text::make('Name', 'name'),
-            BelongsTo::make('Sub Category',  'categories', 'name', resource: CategoryResource::class)
+            BelongsTo::make('Sub Category', 'categories', 'name', resource: CategoryResource::class)
                 ->searchable(),
-            Image::make('Зображення категорії', 'category_img')->removable()
+            Image::make('Зображення категорії', 'img')->removable()
                 ->disk('public')
                 ->dir('upload/images'),
             Checkbox::make('Активно', 'is_active'),
             Slug::make('Slug', 'slug')->from('name')->readonly(),
-            Checkbox::make('On home page', 'onMainMenu'),
+            Checkbox::make('On home page', 'is_on_main_menu'),
         ];
     }
 
     /**
-     * @param CategoriesGroups $item
+     * @param CategoryGroup $item
      *
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules

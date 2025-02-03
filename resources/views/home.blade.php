@@ -267,7 +267,7 @@
                     <div class="col-sm-12 col-lg-10 col-lg-offset-1">
                         <div class="text-center js-homesimple-slider">
                             @foreach($homePageSlider as $homePageSliders)
-                                @if($homePageSliders->isActive)
+                                @if($homePageSliders->is_active)
                                 <div class="slider-img ">
                                     <img src="{{ asset('storage/' . $homePageSliders->img) }}"
                                          alt="{{$homePageSliders->title}}" class="img-responsive">
@@ -289,12 +289,12 @@
                 <div class="owl-carousel owl-theme js-owl-category">
                     @foreach($categoriesGroups as $categoriesGroup)
                         @if($categoriesGroup->is_active)
-                            @if($categoriesGroup->onMainMenu)
+                            @if($categoriesGroup->is_on_main_menu)
 
 
                     <div class="box-category-item">
                         <div class="box-category text-center">
-                            <img src="{{ asset('storage/' . $categoriesGroup->category_img) }}" alt="" class="img-reponsive">
+                            <img src="{{ asset('storage/' . $categoriesGroup->img) }}" alt="" class="img-reponsive">
                             <div class="box-category-name">
                                 <a href="{{ url('category/'.$categoriesGroup->slug) }}">{{$categoriesGroup->name}}</a>
                             </div>

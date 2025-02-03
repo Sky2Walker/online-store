@@ -513,7 +513,7 @@
 
                                     <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 product-item">
                                         <div class="product-images">
-                                            <a href="#" class="hover-images effect"><img src="{{ asset('storage/' . $product->product_img) }}" alt="photo" class="img-reponsive"></a>
+                                            <a href="#" class="hover-images effect"><img src="{{ asset('storage/' . $product->img) }}" alt="photo" class="img-reponsive"></a>
                                             <a href="#" class="btn-add-wishlist ver2"><i class="icon-heart"></i></a>
                                             <a href="#" class="btn-quickview">QUICK VIEW</a>
                                         </div>

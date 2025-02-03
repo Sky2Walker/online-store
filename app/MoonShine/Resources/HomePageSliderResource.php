@@ -33,7 +33,7 @@ class HomePageSliderResource extends ModelResource
         return [
             ID::make()->sortable(),
             Text::make('Title', 'title'),
-            Checkbox::make('Active', 'isActive'),
+            Checkbox::make('Active', 'is_active'),
         ];
     }
 
@@ -48,7 +48,7 @@ class HomePageSliderResource extends ModelResource
                 Text::make('Title', 'title'),
                 Image::make('Image', 'img')
                     ->allowedExtensions(['jpeg', 'png', 'WebP', 'jpg']),
-                Checkbox::make('Active', 'isActive'),
+                Checkbox::make('Active', 'is_active'),
             ])
         ];
     }
@@ -62,7 +62,7 @@ class HomePageSliderResource extends ModelResource
             ID::make(),
             Text::make('Title', 'title'),
             Image::make('Image', 'img'),
-            Checkbox::make('Active', 'isActive'),
+            Checkbox::make('Active', 'is_active'),
         ];
     }
 

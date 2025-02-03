@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Models\CategoriesGroups;
+use App\Models\CategoryGroup;
 use App\Models\Category;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -17,7 +17,7 @@ class CategoryGroupTest extends TestCase
      */
    public function test_get_category_groups_in_index_page(){
 
-        $categoriesGroups = CategoriesGroups::factory(10)->create();
+        $categoriesGroups = CategoryGroup::factory(10)->create();
        $res=$this->get('/');
        $res->assertStatus(200);
        $res->assertViewIs('home');
@@ -28,7 +28,7 @@ class CategoryGroupTest extends TestCase
 
     public function test_get_category_groups_in_shop_page(){
 
-        $categoriesGroups = CategoriesGroups::factory(10)->create();
+        $categoriesGroups = CategoryGroup::factory(10)->create();
         $res=$this->get('/shop');
         $res->assertStatus(200);
         $res->assertViewIs('shop');

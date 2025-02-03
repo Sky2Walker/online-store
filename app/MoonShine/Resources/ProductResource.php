@@ -69,10 +69,10 @@ class ProductResource extends ModelResource
                             3 => 'Джинси',
                             4 => 'Брюки'
                         ]])->searchable()->sortable(),
-                Image::make('Зображення ', 'product_img')->removable()
+                Image::make('Зображення ', 'img')->removable()
                     ->disk('public')
                     ->dir('upload/images'),
-                Number::make('Ratings','ratings')->min(0)->max(5)->stars(),
+                Number::make('Ratings', 'ratings')->min(0)->max(5)->stars(),
                 BelongsTo::make('Підкатегорії ', 'category', 'name')->sortable()->searchable(),
             ])
         ];
@@ -100,7 +100,7 @@ class ProductResource extends ModelResource
                         3 => 'Джинси',
                         4 => 'Брюки'
                     ]])->searchable()->sortable(),
-            Image::make('Зображення ', 'product_img')->removable()
+            Image::make('Зображення ', 'img')->removable()
                 ->disk('public')
                 ->dir('upload/images'),
             HasMany::make('Variants', 'variants', resource: ProductVariantResource::class),

@@ -10,15 +10,14 @@ class ProductRepository
 
     public function __construct(
         protected Product $productModel
-    ){}
-
-    public function getAllProducts(){
-        // TODO добавить ::query()->select(['id', ....]) полей, которые нужны
-        // TODO сделать пагинацию или limit(), никаких all нигде
-        // TODO Как быть с ценами?
-        return $this->productModel::query()->select(['id','name','category_id','product_img', 'ratings'])->paginate(20);
+    )
+    {
     }
 
+    public function getAllProducts()
+    {
+        return $this->productModel::query()->select(['id', 'name', 'category_id', 'img', 'ratings'])->paginate(20);
+    }
 
 
 }

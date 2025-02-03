@@ -10,18 +10,18 @@ class Material extends Model
 {
     protected $table = 'materials';
 
-    public function materialToProductVariants() :HasMany
+    public function materialToProductVariants(): HasMany
     {
         return $this->hasMany(ProductVariant::class, 'material_id');
 
     }
 
-    public function productsMaterial() :HasManyThrough
+    public function productsMaterial(): HasManyThrough
     {
         return $this->hasManyThrough(Product::class, ProductVariant::class,
-        'material_id',
-        'product_id',
-        'id',
+            'material_id',
+            'product_id',
+            'id',
             'id'
         );
     }

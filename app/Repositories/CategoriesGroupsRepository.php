@@ -1,27 +1,34 @@
 <?php
 
 namespace App\Repositories;
-use App\Models\CategoriesGroups;
+
+use App\Models\CategoryGroup;
+
 class CategoriesGroupsRepository
 
 {
     protected const DEFAULT_SELECT_FIELDS = [
         'slug',
         'name',
-        'product_img',
+        'img',
         'id',
         'category_id',
         'ratings'
     ];
+
     public function __construct(
-        protected CategoriesGroups $categoriesGroups){}
-
-    public function getAll(){
-
-        return $this->categoriesGroups::query()->select('id','name', 'slug','category_img','is_active','onMainMenu')->get();
+        protected CategoryGroup $categoriesGroups)
+    {
     }
 
-    public function getCategoryGroup(string $categoriesGroupSlug,int $perPage){
+    public function getAll()
+    {
+
+        return $this->categoriesGroups::query()->select('id', 'name', 'slug', 'img', 'is_active', 'is_on_main_menu')->get();
+    }
+
+    public function getCategoryGroup(string $categoriesGroupSlug, int $perPage)
+    {
         $categoryGroup = $this->categoriesGroups::query()
             ->select(['id', 'name', 'slug'])
             ->where('slug', $categoriesGroupSlug)
@@ -29,7 +36,7 @@ class CategoriesGroupsRepository
 
 
         $products = $categoryGroup->products()
-            ->select('id', 'name', 'slug', 'product_img', 'ratings', 'category_id')
+            ->select('id', 'name', 'slug', 'img', 'ratings', 'category_id')
             ->paginate($perPage);
         return $products;
     }

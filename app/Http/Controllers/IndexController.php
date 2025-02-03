@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CategoriesGroups;
+use App\Models\CategoryGroup;
 use App\Models\Product;
 use App\Services\CategoriesGroupsService;
 use App\Services\HomePageSliderService;
@@ -12,19 +12,13 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
 
-//    protected $productService, $categoryService;
-//
-//    public function __construct(ProductService $productService, CategoriesGroupsService $categoryService){
-//        $this->productService = $productService;
-//        $this->categoryService = $categoryService;
-//    }
-
-    // TODO более краткий и читабельный вариант
     public function __construct(
         protected ProductService          $productService,
         protected CategoriesGroupsService $categoryService,
-        protected HomePageSliderService $homePageSliderService
-    ){}
+        protected HomePageSliderService   $homePageSliderService
+    )
+    {
+    }
 
     public function index()
     {
