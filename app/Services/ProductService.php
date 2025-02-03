@@ -18,7 +18,7 @@ class ProductService
     public function getAllProducts()
     {
 
-        $products = Cache::remember('products:all', 'CACHE_LIFETIME', function () {
+        $products = Cache::remember('products:all', config('cache.lifetime'), function () {
            return $this->productRepository->getAllProducts();
         });
         return $products;

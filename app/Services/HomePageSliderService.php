@@ -14,7 +14,7 @@ class HomePageSliderService
 
     public function getHomePageSlider(){
         // TODO вынести значение времени хранения кеша в env и пробросить через config
-        $homePageSlider = Cache::remember('homePageSlider', 'CACHE_LIFETIME' , function(){
+        $homePageSlider = Cache::remember('homePageSlider', config('cache.lifetime') , function(){
             return $this->homePageSliderRepository->getAll();
         });
         return $homePageSlider;

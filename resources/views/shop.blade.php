@@ -506,7 +506,11 @@
                     <div class="tab-content">
                         <div id="all" class="tab-pane fade in active">
                             <div class="row">
+
+
                                 @foreach($products as $product)
+
+
                                     <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 product-item">
                                         <div class="product-images">
                                             <a href="#" class="hover-images effect"><img src="{{ asset('storage/' . $product->product_img) }}" alt="photo" class="img-reponsive"></a>
@@ -545,14 +549,14 @@
                                 <nav>
                                     <ul class="pagination">
                                         <li><a class="active" href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
+                                        {{ $products->links() }}
                                         <li>
                                             <a href="#" aria-label="Previous">
                                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                                 </a>
                                         </li>
                                     </ul>
+
                                 </nav>
                             </div>
                         </div>

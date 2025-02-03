@@ -14,13 +14,13 @@ class CategoriesGroupsService
 
     public function getAllCategoriesGroups(){
 
-        $categoriesGroups = Cache::remember('categoriesGroups:all', 'CACHE_LIFETIME', function(){
+        $categoriesGroups = Cache::remember('categoriesGroups:all', config('cache.lifetime'), function(){
             return $this->categoriesGroupsRepository->getAll();
         });
         return $categoriesGroups;
     }
 
-    public function getCategoryGroup($categoriesGroupSlug, $perPage){
+    public function getCategoryGroup(string $categoriesGroupSlug, int $perPage){
         return $this->categoriesGroupsRepository->getCategoryGroup($categoriesGroupSlug, $perPage);
     }
 }

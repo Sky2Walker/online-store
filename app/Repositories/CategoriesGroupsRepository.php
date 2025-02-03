@@ -21,10 +21,16 @@ class CategoriesGroupsRepository
         return $this->categoriesGroups::query()->select('id','name', 'slug','category_img','is_active','onMainMenu')->get();
     }
 
-    public function getCategoryGroup($categoriesGroupSlug, $perPage){
-        return $this->categoriesGroups::query()->select(['products.id','name', 'slug', 'product_img', 'ratings'])
-            ->with(['products' => fn($query) => $query
-                ->select('products.id','name', 'slug', 'product_img', 'ratings')->paginate($perPage)])
-            ->where('slug',$categoriesGroupSlug)->firstOrFail();
+    public function getCategoryGroup(string $categoriesGroupSlug,int $perPage){
+        $categoryGroup = $this->categoriesGroups::query()
+            ->select(['id', 'name', 'slug'])
+            ->where('slug', $categoriesGroupSlug)
+            ->firstOrFail();
+
+
+        $products = $categoryGroup->products()
+            ->select('id', 'name', 'slug', 'product_img', 'ratings', 'category_id')
+            ->paginate($perPage);
+        return $products;
     }
 }
