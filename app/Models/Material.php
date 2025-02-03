@@ -18,6 +18,11 @@ class Material extends Model
 
     public function productsMaterial() :HasManyThrough
     {
-        return $this->hasManyThrough(Product::class, ProductVariant::class);
+        return $this->hasManyThrough(Product::class, ProductVariant::class,
+        'material_id',
+        'product_id',
+        'id',
+            'id'
+        );
     }
 }
