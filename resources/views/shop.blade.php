@@ -434,34 +434,15 @@
                             Categories.
                         </h3>
                         <ul class="filter-content js-filter-menu">
-                            <li><a href="">Outerwear</a></li>
-                            <li><a href="">Dresses</a>
-                                <span class="plus js-plus-icon"></span>
-                                <ul class="filter-menu">
-                                    <li class=""><a href="#">Drop menu 1</a></li>
-                                    <li class=""><a href="#">Drop menu 2</a></li>
-                                    <li class=""><a href="#">Drop menu 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Gadgets</a></li>
-                            <li><a href="">Hoodies</a>
-                                <span class="plus js-plus-icon"></span>
-                                <ul class="filter-menu">
-                                    <li class=""><a href="#">Drop menu 1</a></li>
-                                    <li class=""><a href="#">Drop menu 2</a></li>
-                                    <li class=""><a href="#">Drop menu 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Men</a></li>
-                            <li><a href="">Shirts & Blouses</a>
-                                <span class="plus js-plus-icon"></span>
-                                <ul class="filter-menu">
-                                    <li class=""><a href="#">Drop menu 1</a></li>
-                                    <li class=""><a href="#">Drop menu 2</a></li>
-                                    <li class=""><a href="#">Drop menu 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Shoes</a></li>
+
+                            @foreach($categoryGroups as $categoryGroup)
+
+                                <li><a href="{{ url('category/'.$categoryGroup->slug) }}">{{$categoryGroup->name}}</a></li>
+                            @endforeach
+
+
+
+
                         </ul>
                     </div>
                     <div class="filter filter-color">
@@ -520,20 +501,20 @@
                                         <div class="product-info-ver2">
                                             <h3 class="product-title"><a href="#">{{$product->name}}</a></h3>
                                             <div class="product-after-switch">
-                                                <div class="product-price">$295.00</div>
+                                                <div class="product-price">${{ $product->variants->first()?->price ?? 'N/A' }}</div>
                                                 <div class="product-after-button">
                                                     <a href="#" class="addcart">ADD TO CART</a>
                                                 </div>
                                             </div>
                                             <div class="rating-star">
-                                                <span class="star star-5"></span>
-                                                <span class="star star-4"></span>
-                                                <span class="star star-3"></span>
-                                                <span class="star star-2"></span>
+
+                                                @for($i = 0; $i<floor($product->ratings); $i++)
+
                                                 <span class="star star-1"></span>
+                                                @endfor
                                             </div>
-                                            <p class="product-desc">Compellingly brand enterprise value after functional manufactured products. Synergistically morph process-centric intellectual capital rather than extensible catalysts for change. Credibly aggregate progressive initiatives and long-term.</p>
-                                            <div class="product-price">$292.00</div>
+                                            <p class="product-desc">{{$product->description}}</p>
+                                            <div class="product-price">$${{ $product->variants->first()?->price ?? 'N/A' }}.00</div>
                                             <div class="button-group">
                                                 <a href="#" class="button add-to-cart">Add to cart</a>
                                                 <a href="#" class="button add-to-wishlist">Add to wishlist</a>
@@ -547,15 +528,37 @@
                             </div>
                             <div class="pagination-container pagination-blog button-v v2">
                                 <nav>
-                                    <ul class="pagination">
-                                        <li><a class="active" href="#">1</a></li>
-                                        {{ $products->links() }}
-                                        <li>
-                                            <a href="#" aria-label="Previous">
+                                    @if ($products->lastPage() > 1)
+                                        <ul class="pagination">
+
+                                            <li>
+                                                <a href="{{ $products->previousPageUrl() ?? '#' }}"
+                                                   aria-label="Previous"
+                                                   class="{{ $products->onFirstPage() ? 'disabled' : '' }}">
+                                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+
+
+                                            @for ($i = 1; $i <= $products->lastPage(); $i++)
+                                                <li>
+                                                    <a href="{{ $products->url($i) }}"
+                                                       class="{{ $products->currentPage() == $i ? 'active' : '' }}">
+                                                        {{ $i }}
+                                                    </a>
+                                                </li>
+                                            @endfor
+
+
+                                            <li>
+                                                <a href="{{ $products->nextPageUrl() ?? '#' }}"
+                                                   aria-label="Next"
+                                                   class="{{ $products->currentPage() == $products->lastPage() ? 'disabled' : '' }}">
                                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                                 </a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    @endif
 
                                 </nav>
                             </div>

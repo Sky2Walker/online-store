@@ -23,14 +23,16 @@ class ShopController extends Controller
     public function index()
     {
         $products = $this->productService->getAllProducts();
-        $categoriesGroups = $this->categoryService->getAllCategoriesGroups();
-        return view('shop', compact('products', 'categoriesGroups'));
+        $categoryGroups = $this->categoryService->getAllCategoriesGroups();
+        return view('shop', compact('products', 'categoryGroups'));
     }
 
 
     public function getCategoryGroup(string $categoriesGroupSlug, int $perPage = 20)
     {
         $products = $this->categoryService->getCategoryGroup($categoriesGroupSlug, $perPage);
-        return view('shop', compact('products'));
+        $categoryGroups = $this->categoryService->getAllCategoriesGroups();
+
+        return view('shop', compact('products', 'categoryGroups'));
     }
 }
