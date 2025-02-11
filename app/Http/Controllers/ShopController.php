@@ -22,9 +22,8 @@ class ShopController extends Controller
 
     public function index()
     {
-        $products = $this->productService->getAllProducts();
-        $categoryGroups = $this->categoryService->getAllCategoriesGroups();
-        return view('shop', compact('products', 'categoryGroups'));
+
+        return view('shop');
     }
 
 
