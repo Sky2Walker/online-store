@@ -22,11 +22,20 @@ class ShopPageComposer
     /**
      * Bind data to the view.
      */
-    public function compose(View $view): void
-    {
-        $categoriesGroups = $this->categoryService->getAllCategoriesGroups();
-        $products = $this->productService->getAllProducts();
 
-        $view->with('data', compact('categoriesGroups', 'products'));
+        public function compose(View $view): void
+    {
+        $data = $view->getData();
+
+        if (!isset($data['products'])) {
+            $products = $this->productService->getAllProducts();
+            $view->with('products', $products);
+        }
+
+        $categoriesGroup =$this->categoryService->getAllCategoriesGroups();
+        $view->with('categoriesGroup', $categoriesGroup);
     }
+
+
+
 }

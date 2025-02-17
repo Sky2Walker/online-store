@@ -435,7 +435,8 @@
                         </h3>
                         <ul class="filter-content js-filter-menu">
 
-                            @foreach($categoryGroups as $categoryGroup)
+
+                            @foreach($categoriesGroup as $categoryGroup)
 
                                 <li><a href="{{ url('category/'.$categoryGroup->slug) }}">{{$categoryGroup->name}}</a></li>
                             @endforeach
@@ -530,36 +531,28 @@
                                 <nav>
                                     @if ($products->lastPage() > 1)
                                         <ul class="pagination">
-
-                                            <li>
-                                                <a href="{{ $products->previousPageUrl() ?? '#' }}"
-                                                   aria-label="Previous"
-                                                   class="{{ $products->onFirstPage() ? 'disabled' : '' }}">
+                                            {{-- Кнопка "Назад" --}}
+                                            <li class="{{ $products->onFirstPage() ? 'disabled' : '' }}">
+                                                <a href="{{ $products->previousPageUrl() ? request()->fullUrlWithQuery(['page' => $products->currentPage() - 1]) : '#' }}">
                                                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                                                 </a>
                                             </li>
 
-
+                                            {{-- Цифры страниц --}}
                                             @for ($i = 1; $i <= $products->lastPage(); $i++)
-                                                <li>
-                                                    <a href="{{ $products->url($i) }}"
-                                                       class="{{ $products->currentPage() == $i ? 'active' : '' }}">
-                                                        {{ $i }}
-                                                    </a>
+                                                <li class="{{ $products->currentPage() == $i ? 'active' : '' }}">
+                                                    <a href="{{ request()->fullUrlWithQuery(['page' => $i]) }}">{{ $i }}</a>
                                                 </li>
                                             @endfor
 
-
-                                            <li>
-                                                <a href="{{ $products->nextPageUrl() ?? '#' }}"
-                                                   aria-label="Next"
-                                                   class="{{ $products->currentPage() == $products->lastPage() ? 'disabled' : '' }}">
+                                            {{-- Кнопка "Вперед" --}}
+                                            <li class="{{ $products->currentPage() == $products->lastPage() ? 'disabled' : '' }}">
+                                                <a href="{{ $products->nextPageUrl() ? request()->fullUrlWithQuery(['page' => $products->currentPage() + 1]) : '#' }}">
                                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                                 </a>
                                             </li>
                                         </ul>
                                     @endif
-
                                 </nav>
                             </div>
                         </div>

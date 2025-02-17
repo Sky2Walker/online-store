@@ -22,7 +22,6 @@ class ShopController extends Controller
 
     public function index()
     {
-
         return view('shop');
     }
 
@@ -30,8 +29,7 @@ class ShopController extends Controller
     public function getCategoryGroup(string $categoriesGroupSlug, int $perPage = 20)
     {
         $products = $this->categoryService->getCategoryGroup($categoriesGroupSlug, $perPage);
-        $categoryGroups = $this->categoryService->getAllCategoriesGroups();
 
-        return view('shop', compact('products', 'categoryGroups'));
+        return view('shop', compact('products'));
     }
 }
