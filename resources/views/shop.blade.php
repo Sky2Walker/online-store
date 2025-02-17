@@ -502,7 +502,11 @@
                                         <div class="product-info-ver2">
                                             <h3 class="product-title"><a href="#">{{$product->name}}</a></h3>
                                             <div class="product-after-switch">
-                                                <div class="product-price">${{ $product->variants->first()?->price ?? 'N/A' }}</div>
+                                                <div class="product-price">$@if($product->variants->isNotEmpty())
+                                                    ${{ $product->variants[0]->price }}
+                                                    @else
+                                                        N/A
+                                                    @endif</div>
                                                 <div class="product-after-button">
                                                     <a href="#" class="addcart">ADD TO CART</a>
                                                 </div>
