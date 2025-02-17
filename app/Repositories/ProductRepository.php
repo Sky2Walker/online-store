@@ -16,7 +16,9 @@ class ProductRepository
 
     public function getAllProducts()
     {
-        return $this->productModel::query()->select(['id', 'name', 'category_id', 'img', 'ratings'])->paginate(20);
+        return $this->productModel::query()->select(['id', 'name', 'category_id', 'img', 'ratings'])
+            ->with('variants')
+            ->paginate(20);
     }
 
     public function getProductPrice(int $id)

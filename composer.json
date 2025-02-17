@@ -12,6 +12,8 @@
         "moonshine/moonshine": "^3.2"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.14",
+        "beyondcode/laravel-query-detector": "^2.0",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
