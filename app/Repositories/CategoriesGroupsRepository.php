@@ -37,6 +37,9 @@ class CategoriesGroupsRepository
 
         $products = $categoryGroup->products()
             ->select('id', 'name', 'slug', 'img', 'ratings', 'category_id', 'description')
+            ->with(['variants' => function($query) {
+                $query->select('product_id', 'price');
+            }])
             ->paginate($perPage);
 
 
