@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Cosso - Clean, Minimal Responsive HTML Template</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" type="image/png">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/PlayfairDisplay/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/simple-line-icon/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('sass/components/Vendor/font-awesome/font-awesome.min.css') }}">
+    <link rel="shortcut icon" href="{{asset('css/owl.carousel.min.css')}}" type="image/png">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-slider.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
 </head>
 
 <body>
@@ -22,56 +26,15 @@
             <span class="close-left js-close"><i class="icon-close f-20"></i></span>
             <div class="clearfix"></div>
             <ul class="nav-home5 js-menubar">
-                <li class="level1 active dropdown"><a href="#">Home</a>
-                    <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="home-simple.html" title="Home Simple">Home Simple</a></li>
-                        <li class="level2"><a href="home_clean.html" title="Home Clean">Home Clean</a></li>
-                        <li class="level2"><a href="home_bestselling.html" title="Home Bestselling">Home Bestselling</a></li>
-                        <li class="level2"><a href="home_instagrams.html" title="Home Instagram Shop">Home Instagram Shop</a></li>
-                        <li class="level2"><a href="home_cat_metro.html" title="Home Cat Metro">Home Cat Metro</a></li>
-                        <li class="level2"><a href="home_categories_slider_fullwidth.html" title="Home Categories Slider">Home Categories Slider</a></li>
-                        <li class="level2"><a href="home_cate.html" title="Home Categories">Home Categories</a></li>
-                        <li class="level2"><a href="home_parallax.html" title="Home Parallax">Home Parallax</a></li>
-                        <li class="level2"><a href="home_fullslider.html" title="Home Fullslider">Home Fullslider</a></li>
-                        <li class="level2"><a href="home_lookbook.html" title="Home Lookbook">Home Lookbook</a></li>
-                        <li class="level2"><a href="home-minimal.html" title="Home Minimal">Home Minimal</a></li>
-                    </ul>
+                <li class="level1 active dropdown"><a href="{{url('/')}}">Home</a>
                 </li>
-                <li class="level1 active dropdown"><a href="#">Shop</a>
-                    <div class="menu-level1 js-open-menu">
-                        <ul class="level1">
-                            <li class="level2">
-                                <a href="#">Shop pages</a>
-                                <ul class="menu-level-2">
-                                    <li class="level3"><a href="cart_page_emty.html" title="Cart Empty">Cart Empty</a></li>
-                                    <li class="level3"><a href="Cart_page_Prodcut.html" title="Shopping Cart">Shopping Cart</a></li>
-                                    <li class="level3"><a href="checkout.html" title="Checkout">Checkout</a></li>
-                                </ul>
-                            </li>
-                            <li class="level2">
-                                <a href="#">Product demo</a>
-                                <ul class="menu-level-2">
-                                    <li class="level3"><a href="single_product_simple.html" title="Product Simple">Product — Simple</a></li>
-                                    <li class="level3"><a href="single_product_variable.html" title="Product Variable">Product — Variable</a></li>
-                                    <li class="level3"><a href="single_product_downloadable.html" title="Product Downloadable">Product — Downloadable</a></li>
-                                    <li class="level3"><a href="single_Product_Grouped.html" title="Product Grouped">Product — Grouped</a></li>
-                                    <li class="level3"><a href="single_product_affiliate.html" title="Product Affiliate">Product — External / Affiliate</a></li>
-                                    <li class="level3"><a href="single_product_bundle.html" title="Product bundle">Product with bundle</a></li>
-                                    <li class="level3"><a href="single_product_360.html" title="Product 360">Product 360 Degree View</a></li>
-                                    <li class="level3"><a href="single_product_video.html" title="Product Featured Video">Product Video</a></li>
-                                    <li class="level3"><a href="single_product_fullwidth.html" title="Product Fullwidth">Product Fullwidth</a></li>
-                                    <li class="level3"><a href="single_product_sticky_detail.html" title="Product Sticky Detail">Product Sticky Detail</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
+                <li class="level1 active dropdown"><a href="{{url('/shop')}}">Shop</a>
                 </li>
                 <li class="level1">
                     <a href="#">Pages</a>
                     <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="login.html" title="Login">Login</a></li>
-                        <li class="level2"><a href="register.html" title="Register">Register</a></li>
+                        <li class="level2"><a href="login.blade.php" title="Login">Login</a></li>
+                        <li class="level2"><a href="register.blade.php" title="Register">Register</a></li>
                     </ul>
                 </li>
                 <li class="level1">
@@ -81,15 +44,15 @@
                             <li class="level2">
                                 <a href="#">Other Pages</a>
                                 <ul class="menu-level-2">
-                                    <li class="level3"><a href="about_agency.html" title="About Agency">About Agency</a></li>
-                                    <li class="level3"><a href="about_shop.html" title="About Designer">About Designer</a></li>
-                                    <li class="level3"><a href="about-designer.html" title="About Shop">About Shop</a></li>
+                                    <li class="level3"><a href="about_agency.blade.php" title="About Agency">About Agency</a></li>
+                                    <li class="level3"><a href="about_shop.blade.php" title="About Designer">About Designer</a></li>
+                                    <li class="level3"><a href="about-designer.blade.php" title="About Shop">About Shop</a></li>
                                     <li class="level3"><a href="commingsoon.html" title="Commingsoon">Commingsoon</a></li>
                                     <li class="level3"><a href="contact_gmap.html" title="Contact_Map">Contact Map</a></li>
-                                    <li class="level3"><a href="contact_simple.html" title="Contact_Simple">Contact Simple</a></li>
-                                    <li class="level3"><a href="faq.html" title="FAQs">FAQs</a></li>
-                                    <li class="level3"><a href="our_teams.html" title="Our teams">Our teams</a></li>
-                                    <li class="level3"><a href="404.html" title="404 pages">404 page</a></li>
+                                    <li class="level3"><a href="contact_simple.blade.php" title="Contact_Simple">Contact Simple</a></li>
+                                    <li class="level3"><a href="faq.blade.php" title="FAQs">FAQs</a></li>
+                                    <li class="level3"><a href="our_teams.blade.php" title="Our teams">Our teams</a></li>
+                                    <li class="level3"><a href="404.blade.php" title="404 pages">404 page</a></li>
                                 </ul>
                             </li>
                             <li class="level2">
@@ -110,7 +73,7 @@
                             <li class="level2">
                                 <a href="#">Lookbook</a>
                                 <ul class="menu-level-2">
-                                    <li class="level3"><a href="lookbook_grid.html" title="Lookbook Grid">Lookbook Grid</a></li>
+                                    <li class="level3"><a href="lookbook_grid.blade.php" title="Lookbook Grid">Lookbook Grid</a></li>
                                     <li class="level3"><a href="lookbook_masonry.html" title="Lookbook Masonry">Lookbook Masonry</a></li>
                                     <li class="level3"><a href="lookbook_popup.html" title="Lookbook Popup">Lookbook Popup</a></li>
                                 </ul>
@@ -122,7 +85,7 @@
                 <li class="level1">
                     <a href="#">Elements</a>
                     <ul class="menu-level1 js-open-menu">
-                        <li class="level2"><a href="quickview.html" title="Quick View">Quick View</a></li>
+                        <li class="level2"><a href="quickview.blade.php" title="Quick View">Quick View</a></li>
                         <li class="level2"><a href="#" title="Hover Product 4">Hover Product 4</a></li>
                         <li class="level2"><a href="#" title="Hover Product ">Hover Product </a></li>
                     </ul>
@@ -137,7 +100,7 @@
                         <li class="level2"><a href="singlepost_carouselproduct.html" title="Blog Single port Carousel Product">Blog Single port Carousel Product</a></li>
                         <li class="level2"><a href="single_port_instgram.html" title="Blog Single port Instgram">Blog Single port Instgram</a></li>
                         <li class="level2"><a href="singlepost_nosidebar.html" title="Blog Single port Nosidebar">Blog Single port Nosidebar</a></li>
-                        <li class="level2"><a href="singlepost_sidebar.html" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
+                        <li class="level2"><a href="singlepost_sidebar.blade.php" title="Blog Single port Sidebar">Blog Single port Sidebar</a></li>
                         <li class="level2"><a href="single_port_woomaper.html" title="Blog Single port Woomaper">Blog Single port Woomaper</a></li>
                     </ul>
                 </li>
@@ -303,34 +266,18 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-10 col-lg-offset-1">
                         <div class="text-center js-homesimple-slider">
-                            <div class="slider-img ">
-                                <img src="img/homesimple_1.jpg" alt="" class="img-responsive">
-                                <div class="slider-content text-center">
-                                    <h3>Mid Season Sale </h3>
-                                    <a href="">Explorer Now</a>
+                            @foreach($homePageSlider as $homePageSliders)
+                                @if($homePageSliders->is_active)
+                                <div class="slider-img ">
+                                    <img src="{{ asset('storage/' . $homePageSliders->img) }}"
+                                         alt="{{$homePageSliders->title}}" class="img-responsive">
+                                    <div class="slider-content text-center">
+                                        <h3>{{$homePageSliders->title}} </h3>
+                                        <a href="">Explorer Now</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="slider-img ">
-                                <img src="img/homesimple_2.jpg" alt="" class="img-responsive">
-                                <div class="slider-content text-center">
-                                    <h3>Mid Season Sale </h3>
-                                    <a href="">Explorer Now</a>
-                                </div>
-                            </div>
-                            <div class="slider-img ">
-                                <img src="img/homesimple_3.jpg" alt="" class="img-responsive">
-                                <div class="slider-content text-center">
-                                    <h3>Mid Season Sale </h3>
-                                    <a href="">Explorer Now</a>
-                                </div>
-                            </div>
-                            <div class="slider-img ">
-                                <img src="img/homesimple_1.jpg" alt="" class="img-responsive">
-                                <div class="slider-content text-center">
-                                    <h3>Mid Season Sale </h3>
-                                    <a href="">Explorer Now</a>
-                                </div>
-                            </div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -342,14 +289,18 @@
                 <div class="owl-carousel owl-theme js-owl-category">
                     @foreach($categoriesGroups as $categoriesGroup)
                         @if($categoriesGroup->is_active)
+                            @if($categoriesGroup->is_on_main_menu)
+
+
                     <div class="box-category-item">
                         <div class="box-category text-center">
-                            <img src="{{ asset('storage/' . $categoriesGroup->category_img) }}" alt="" class="img-reponsive">
+                            <img src="{{ asset('storage/' . $categoriesGroup->img) }}" alt="" class="img-reponsive">
                             <div class="box-category-name">
-                                <a href="">{{$categoriesGroup->name}}</a>
+                                <a href="{{ url('category/'.$categoriesGroup->slug) }}">{{$categoriesGroup->name}}</a>
                             </div>
                         </div>
                     </div>
+                            @endif
                         @endif
                     @endforeach
                 </div>

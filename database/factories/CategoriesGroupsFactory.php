@@ -16,7 +16,7 @@ class CategoriesGroupsFactory extends Factory
      * @return array<string, mixed>
      */
 
-    protected  $model = \App\Models\CategoriesGroups::class;
+    protected  $model = \App\Models\CategoryGroup::class;
     public function definition(): array
     {
         return [

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\CategoryGroup;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,16 +19,15 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'category_id' => $this->faker->numberBetween(1,10),
-            'price' => $this->faker->randomFloat(2,0,1000),
-            'sku' => $this->faker->numberBetween(1,100),
-            'slug' => $this->faker->slug(),
+            'category_id' => CategoryGroup::query()->inRandomOrder()->value('id') ?? 1,
+            'slug' => $this->faker->unique()->slug(),
             'tags' => $this->faker->word(),
-            'product_img' => $this->faker->imageUrl(),
+            'img' => 'upload/images/BR87JpoNyXuYV4iQDs99ghKqRG15NjeJvejMg8M4.jpg',
             'created_at' => $this->faker->dateTime(),
             'updated_at' => $this->faker->dateTime(),
             'description'=> $this->faker->text(),
             'additional_information' => $this->faker->text(),
+            'ratings' => $this->faker->randomFloat(1,1,5),
         ];
     }
 }
