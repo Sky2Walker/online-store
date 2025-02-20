@@ -48,19 +48,19 @@ class CategoriesGroupsResource extends ModelResource
     protected function formFields(): iterable
     {
         return [
-            Box::make([
+            Box::make(array(
                 ID::make(),
                 Text::make('Name', 'name'),
-                BelongsTo::make('Sub Category', 'categories', 'name', resource: CategoryResource::class)
-                    ->searchable(),
+               BelongsTo::make('Sub Category', 'category', 'name', resource: CategoryResource::class)
+                   ->searchable(),
                 Image::make('Зображення категорії', 'img')->removable()
-                    ->disk('public')
+                   ->disk('public')
                     ->dir('upload/images'),
-                Checkbox::make('Активно', 'is_active'),
-                Slug::make('Slug', 'slug')->from('name')->readonly(),
-                Checkbox::make('On home page', 'is_on_main_menu'),
+               Checkbox::make('Активно', 'is_active'),
+               Slug::make('Slug', 'slug')->from('name')->readonly(),
+               Checkbox::make('On home page', 'is_on_main_menu'),
 
-            ])
+            ))
         ];
     }
 
@@ -72,10 +72,10 @@ class CategoriesGroupsResource extends ModelResource
         return [
             ID::make(),
             Text::make('Name', 'name'),
-            BelongsTo::make('Sub Category', 'categories', 'name', resource: CategoryResource::class)
-                ->searchable(),
+            BelongsTo::make('Sub Category', 'category', 'name', resource: CategoryResource::class)
+              ->searchable(),
             Image::make('Зображення категорії', 'img')->removable()
-                ->disk('public')
+               ->disk('public')
                 ->dir('upload/images'),
             Checkbox::make('Активно', 'is_active'),
             Slug::make('Slug', 'slug')->from('name')->readonly(),
