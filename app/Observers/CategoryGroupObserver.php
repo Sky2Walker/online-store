@@ -7,12 +7,13 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoryGroupObserver
 {
+    private const CACHE_KEY='categoriesGroups:all';
     /**
      * Handle the CategoryGroup "created" event.
      */
     public function created(CategoryGroup $categoryGroup): void
     {
-        Cache::forget('categoriesGroups:all');
+        Cache::forget(self::CACHE_KEY);
     }
 
     /**
@@ -20,7 +21,7 @@ class CategoryGroupObserver
      */
     public function updated(CategoryGroup $categoryGroup): void
     {
-        Cache::forget('categoriesGroups:all');
+        Cache::forget(self::CACHE_KEY);
 
     }
 
@@ -29,7 +30,7 @@ class CategoryGroupObserver
      */
     public function deleted(CategoryGroup $categoryGroup): void
     {
-        Cache::forget('categoriesGroups:all');
+        Cache::forget(self::CACHE_KEY);
     }
 
     /**

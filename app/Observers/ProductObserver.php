@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Redis;
 
 class ProductObserver
 {
+    private  const CACHE_KEY = 'products:all';
+
     /**
      * Handle the Product "created" event.
      */
     public function created(Product $product): void
     {
-        Cache::forget('products:all');
+        Cache::forget(self::CACHE_KEY);
     }
 
     /**
@@ -22,7 +24,7 @@ class ProductObserver
      */
     public function updated(Product $product): void
     {
-        Cache::forget('products:all');
+        Cache::forget(self::CACHE_KEY);
     }
 
     /**
@@ -30,7 +32,7 @@ class ProductObserver
      */
     public function deleted(Product $product): void
     {
-        Cache::forget('products:all');
+        Cache::forget(self::CACHE_KEY);
     }
 
     /**
