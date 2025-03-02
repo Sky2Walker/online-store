@@ -17,14 +17,21 @@ class ProductRepository
     public function getAllProducts()
     {
         return $this->productModel::query()->select(['id', 'name', 'category_id', 'img', 'ratings'])
-            ->with('variants')
-            ->paginate(20);
+            ->with(['variants'])->paginate(20);
     }
 
     public function getProductPrice(int $id)
     {
         return $this->productModel->variants()->select(['price'])->where('id', $id)->firstOrFail();
     }
+
+    public function getProductsByCategoryId(int $id){
+        return $this->productModel::query()->select(['id', 'name', 'category_id', 'img', 'ratings'])
+            ->where('category_id', $id)
+            ->with(['variants'])->paginate(20);
+    }
+
+
 
 
 }

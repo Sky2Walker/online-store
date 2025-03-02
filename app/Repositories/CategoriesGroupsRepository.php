@@ -45,4 +45,5 @@ class CategoriesGroupsRepository
 
         return $products;
     }
+
 }

@@ -30,5 +30,8 @@ class ProductService
         return $this->productRepository->getProductPrice($id);
     }
 
+    public function getProductsByCategory(int $id){
+        return $this->productRepository->getProductsByCategoryId($id);
+    }
 
 }

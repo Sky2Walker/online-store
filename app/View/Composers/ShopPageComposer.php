@@ -4,7 +4,10 @@ namespace App\View\Composers;
 
 
 use App\Services\CategoriesGroupsService;
+use App\Services\ColorService;
+use App\Services\MaterialService;
 use App\Services\ProductService;
+use App\Services\SizeService;
 use Illuminate\View\View;
 
 class ShopPageComposer
@@ -14,7 +17,10 @@ class ShopPageComposer
      */
     public function __construct(
         protected ProductService          $productService,
-        protected CategoriesGroupsService $categoryService
+        protected CategoriesGroupsService $categoryService,
+        protected ColorService           $colorService,
+        protected MaterialService         $materialService,
+        protected SizeService            $sizeService,
     )
     {
     }
@@ -31,9 +37,16 @@ class ShopPageComposer
             $products = $this->productService->getAllProducts();
             $view->with('products', $products);
         }
-
+        $colors = $this->colorService->getColors();
+        $materials = $this->materialService->getMaterials();
         $categoriesGroup =$this->categoryService->getAllCategoriesGroups();
-        $view->with('categoriesGroup', $categoriesGroup);
+        $sizes = $this->sizeService->getSizes();
+        $view->with([
+            'categoriesGroup' => $categoriesGroup,
+            'colors' => $colors,
+            'materials' => $materials,
+            'sizes' => $sizes,
+        ]);
     }
 
 
